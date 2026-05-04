@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#0b3d2e" />
+  <title>Análise de Recolhida — Sambaíba</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">RC</span>
+      <div class="brand-text">
+        <strong>Análise de Recolhida</strong>
+        <small>Sambaíba — Garagem 3</small>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <span id="clock" class="clock" aria-live="polite">--:--</span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-view="marcacao" role="tab">Marcação</button>
+    <button class="tab" data-view="historico" role="tab">Histórico</button>
+    <button class="tab" data-view="cadastros" role="tab">Cadastros</button>
+    <button class="tab" data-view="exportar" role="tab">Exportar</button>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============== MARCAÇÃO ============== -->
+    <section id="view-marcacao" class="view active">
+
+      <div class="step" id="step-linha">
+        <label class="step-label">1 — Linha</label>
+        <div class="input-row">
+          <input
+            id="input-linha"
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="ex.: 351, 271, 1156"
+            class="big-input"
+          />
+          <button id="btn-clear-linha" class="ghost-btn" type="button" aria-label="Limpar">×</button>
+        </div>
+        <div id="suggest-linha" class="suggest-list"></div>
+      </div>
+
+      <div class="step disabled" id="step-tabela">
+        <label class="step-label">2 — Tabela</label>
+        <div class="input-row">
+          <input
+            id="input-tabela"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="ex.: 12, 305"
+            class="big-input"
+            disabled
+          />
+          <button id="btn-clear-tabela" class="ghost-btn" type="button" aria-label="Limpar">×</button>
+        </div>
+        <div id="suggest-tabela" class="suggest-list"></div>
+      </div>
+
+      <div class="step disabled" id="step-carro">
+        <label class="step-label">3 — Carro</label>
+        <div class="input-row">
+          <input
+            id="input-carro"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="ex.: 8421"
+            class="big-input"
+            disabled
+          />
+          <button id="btn-clear-carro" class="ghost-btn" type="button" aria-label="Limpar">×</button>
+        </div>
+        <div id="suggest-carro" class="suggest-list"></div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-ok" class="big-btn primary" type="button" disabled>
+          REGISTRAR ENTRADA
+        </button>
+      </div>
+
+      <div id="last-mark" class="last-mark hidden" aria-live="polite">
+        <div class="last-pill" id="last-pill">PONTUAL</div>
+        <div class="last-info">
+          <div><strong id="last-linha-tabela">—</strong></div>
+          <div class="muted">Carro <span id="last-carro">—</span> · <span id="last-hora">--:--</span></div>
+          <div class="muted" id="last-detalhe">—</div>
+        </div>
+        <button id="btn-undo" class="ghost-btn small" type="button">Desfazer</button>
+      </div>
+
+      <div class="tip">
+        <strong>Tolerância ±5 min.</strong>
+        <span class="muted">Carros buscados pelo manobrista NÃO devem ser registrados.</span>
+      </div>
+
+    </section>
+
+    <!-- ============== HISTÓRICO ============== -->
+    <section id="view-historico" class="view">
+      <div class="filters">
+        <label>Período:</label>
+        <select id="filtro-periodo">
+          <option value="hoje">Hoje</option>
+          <option value="7" selected>Últimos 7 dias</option>
+          <option value="14">Últimos 14 dias</option>
+          <option value="all">Todo o histórico</option>
+        </select>
+      </div>
+
+      <div class="card">
+        <h3>Resumo do dia</h3>
+        <div id="resumo-dia" class="kpis"></div>
+      </div>
+
+      <div class="card">
+        <h3>Tabela diária</h3>
+        <div class="table-wrap">
+          <table id="tab-diaria" class="data-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Total</th>
+                <th>Adiantados</th>
+                <th>Pontuais</th>
+                <th>Atrasados</th>
+                <th>% Adiant.</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Pareto por Linha (resumido)</h3>
+        <div id="pareto-linhas" class="pareto"></div>
+      </div>
+
+      <div class="card">
+        <h3>Ranking Cumulativo de Tabelas</h3>
+        <p class="muted small">Ordenado pelo número absoluto de adiantamentos. Sem mínimo de amostra.</p>
+        <div class="table-wrap">
+          <table id="ranking-tabelas" class="data-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Linha</th>
+                <th>Tabela</th>
+                <th>Total</th>
+                <th>Adiant.</th>
+                <th>% Adiant.</th>
+                <th>Desvio Médio</th>
+                <th>Última</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Pendentes (sem cadastro mestre)</h3>
+        <p class="muted small">Recalculam automaticamente quando você cadastrar a Linha+Tabela.</p>
+        <div id="pendentes" class="pendentes"></div>
+      </div>
+    </section>
+
+    <!-- ============== CADASTROS ============== -->
+    <section id="view-cadastros" class="view">
+
+      <div class="card">
+        <h3>Cadastrar Linha</h3>
+        <div class="form-row">
+          <input id="cad-linha" type="text" placeholder="Código (ex.: 351f)" autocomplete="off" />
+          <input id="cad-linha-nome" type="text" placeholder="Nome da linha (opcional)" autocomplete="off" />
+          <button id="btn-cad-linha" class="primary" type="button">Adicionar</button>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="tab-linhas">
+            <thead><tr><th>Código</th><th>Nome</th><th>Ações</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Cadastrar Tabela + Hora Prevista</h3>
+        <div class="form-row">
+          <select id="cad-tab-linha"><option value="">Linha…</option></select>
+          <input id="cad-tab-num" type="text" inputmode="numeric" placeholder="Tabela" autocomplete="off" />
+          <input id="cad-tab-hora" type="time" />
+          <button id="btn-cad-tab" class="primary" type="button">Adicionar</button>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="tab-tabelas">
+            <thead><tr><th>Linha</th><th>Tabela</th><th>Recolhida prevista</th><th>Ações</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Importar / Exportar mestre</h3>
+        <div class="form-row">
+          <button id="btn-export-master" class="ghost" type="button">Exportar JSON do mestre</button>
+          <label class="ghost file-label">
+            Importar JSON
+            <input id="file-import-master" type="file" accept="application/json" hidden />
+          </label>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============== EXPORTAR ============== -->
+    <section id="view-exportar" class="view">
+      <div class="card">
+        <h3>Exportar Excel do Dia</h3>
+        <p class="muted small">Gera .xlsx com aba Registros + aba Resumo. Mover para <code>Coordenador_Sambaíba/coletas_diarias/</code>.</p>
+        <div class="form-row">
+          <input id="data-exportar-dia" type="date" />
+          <button id="btn-export-dia" class="primary" type="button">Exportar Dia</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Exportar Semana Consolidada</h3>
+        <p class="muted small">Formato exato da aba <strong>COLETA_REAL</strong> da planilha mestre Recolhida_Frota_Analise.xlsx.</p>
+        <div class="form-row">
+          <input id="data-exportar-ini" type="date" />
+          <input id="data-exportar-fim" type="date" />
+          <button id="btn-export-semana" class="primary" type="button">Exportar Semana</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Backup completo (JSON)</h3>
+        <p class="muted small">Salva tudo: marcações, linhas e tabelas mestre. Use para versionar em <code>data/</code> do repositório.</p>
+        <div class="form-row">
+          <button id="btn-backup-json" class="ghost" type="button">Baixar backup .json</button>
+          <label class="ghost file-label">
+            Restaurar de .json
+            <input id="file-restore-json" type="file" accept="application/json" hidden />
+          </label>
+        </div>
+      </div>
+
+      <div class="card danger">
+        <h3>Zona de cuidado</h3>
+        <div class="form-row">
+          <button id="btn-limpar-dia" class="warn" type="button">Apagar marcações de hoje</button>
+          <button id="btn-limpar-tudo" class="warn" type="button">Apagar TUDO</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bottom">
+    <span id="status-pwa" class="muted small">PWA pronto · offline-first</span>
+    <span id="contador" class="muted small">0 marcações hoje</span>
+  </footer>
+
+  <!-- Vendor: SheetJS (carregado localmente para offline) -->
+  <script src="vendor/xlsx.full.min.js"></script>
+
+  <!-- Núcleo -->
+  <script src="js/storage.js"></script>
+  <script src="js/classify.js"></script>
+  <script src="js/marcacao.js"></script>
+  <script src="js/cadastros.js"></script>
+  <script src="js/historico.js"></script>
+  <script src="js/exportar.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
