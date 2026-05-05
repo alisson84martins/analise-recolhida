@@ -112,31 +112,86 @@
   function getMarcacoes(){ return _get(K.MARCACOES, []); }
   function _saveMarcacoes(arr){ _set(K.MARCACOES, arr); }
 
-  function novaMarcacao({ linha, tabela, carro }){
-    const ts = Date.now();
-    const d  = new Date(ts);
-    const ymd = d.toISOString().slice(0,10);
+  // ymd em horário LOCAL (evita virada de UTC em turnos noturnos)
+  function _ymdLocal(d){
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  }
+
+  // Aceita ts opcional (lançamento retroativo) e tabela vazia (PENDENTE)
+  function novaMarcacao({ linha, tabela, carro, ts, manual }){
+    const tsUsed = ts || Date.now();
+    const d  = new Date(tsUsed);
+    const ymd = _ymdLocal(d);
     const hh  = String(d.getHours()).padStart(2,'0');
     const mm  = String(d.getMinutes()).padStart(2,'0');
     const reg = {
-      id: 'm_' + ts + '_' + Math.random().toString(36).slice(2,7),
-      ts, data: ymd, hora: hh+':'+mm,
-      linha: String(linha||'').trim(),
+      id: 'm_' + tsUsed + '_' + Math.random().toString(36).slice(2,7),
+      ts: tsUsed, data: ymd, hora: hh+':'+mm,
+      linha:  String(linha ||'').trim(),
       tabela: String(tabela||'').trim(),
-      carro: String(carro||'').trim(),
+      carro:  String(carro ||'').trim(),
       desvioMin: null,
-      classe: 'PENDENTE'
+      classe: 'PENDENTE',
+      manual: !!manual
     };
-    const tab = findTabela(reg.linha, reg.tabela);
-    if (tab){
-      reg.desvioMin = Recolhida.classify.diffMin(reg.hora, tab.horaPrevista);
-      reg.classe    = Recolhida.classify.classe(reg.desvioMin);
+    if (reg.tabela){
+      const tab = findTabela(reg.linha, reg.tabela);
+      if (tab){
+        reg.desvioMin = Recolhida.classify.diffMin(reg.hora, tab.horaPrevista);
+        reg.classe    = Recolhida.classify.classe(reg.desvioMin);
+      }
     }
     const arr = getMarcacoes();
     arr.push(reg);
     _saveMarcacoes(arr);
     rememberCarro(reg.carro);
     return reg;
+  }
+
+  // Atualiza tabela em lote de marcações (linha + tabela antiga, possivelmente vazia)
+  // Recalcula classificação automaticamente.
+  function updateTabelaEmMarcacoes(linha, tabelaAntiga, novaTabela){
+    novaTabela = (novaTabela||'').trim();
+    const arr = getMarcacoes();
+    let n = 0;
+    for (const m of arr){
+      if (m.linha === linha && (m.tabela||'') === (tabelaAntiga||'')){
+        m.tabela = novaTabela;
+        // tenta reclassificar
+        const t = novaTabela ? findTabela(m.linha, m.tabela) : null;
+        if (t){
+          m.desvioMin = Recolhida.classify.diffMin(m.hora, t.horaPrevista);
+          m.classe    = Recolhida.classify.classe(m.desvioMin);
+        } else {
+          m.desvioMin = null;
+          m.classe    = 'PENDENTE';
+        }
+        n++;
+      }
+    }
+    if (n) _saveMarcacoes(arr);
+    return n;
+  }
+
+  // Atualiza UMA marcação específica pelo id
+  function updateMarcacao(id, patch){
+    const arr = getMarcacoes();
+    const m = arr.find(x => x.id === id);
+    if (!m) return false;
+    Object.assign(m, patch);
+    if (m.tabela){
+      const t = findTabela(m.linha, m.tabela);
+      if (t){
+        m.desvioMin = Recolhida.classify.diffMin(m.hora, t.horaPrevista);
+        m.classe    = Recolhida.classify.classe(m.desvioMin);
+      } else {
+        m.desvioMin = null; m.classe = 'PENDENTE';
+      }
+    } else {
+      m.desvioMin = null; m.classe = 'PENDENTE';
+    }
+    _saveMarcacoes(arr);
+    return true;
   }
 
   function deleteMarcacao(id){
@@ -230,6 +285,7 @@
     getTabelas, addTabela, removeTabela, findTabela, suggestTabelasParaLinha,
     getCarros, rememberCarro, suggestCarros,
     getMarcacoes, novaMarcacao, deleteMarcacao, deleteMarcacoesDoDia, clearAll,
+    updateTabelaEmMarcacoes, updateMarcacao,
     recalcPendentes,
     exportAll, importAll, exportMaster, importMaster
   };

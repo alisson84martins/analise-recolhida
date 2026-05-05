@@ -53,21 +53,22 @@
   function setLinha(v){
     state.linha = v.trim();
     els.iL.value = v;
+    // Linha habilita Tabela E Carro (Tabela é opcional)
     els.stepTabela.classList.toggle('disabled', !state.linha);
     els.iT.disabled = !state.linha;
+    els.stepCarro.classList.toggle('disabled', !state.linha);
+    els.iC.disabled = !state.linha;
     if (!state.linha){
       setTabela('');
+      setCarro('');
     }
     refreshSuggestLinha();
+    refreshOK();
   }
   function setTabela(v){
     state.tabela = v.trim();
     els.iT.value = v;
-    els.stepCarro.classList.toggle('disabled', !state.tabela);
-    els.iC.disabled = !state.tabela;
-    if (!state.tabela){
-      setCarro('');
-    }
+    // Tabela NÃO controla mais Carro — Carro depende só de Linha
     refreshSuggestTabela();
     refreshOK();
   }
@@ -79,20 +80,23 @@
   }
 
   function refreshOK(){
-    const ok = state.linha && state.tabela && state.carro;
+    // Tabela é opcional. Basta Linha + Carro.
+    const ok = !!(state.linha && state.carro);
     els.btnOK.disabled = !ok;
   }
 
   function onLinhaInput(){
     const v = els.iL.value.trim();
     state.linha = v;
+    // Habilita Tabela e Carro a partir da digitação da linha
+    els.stepTabela.classList.toggle('disabled', !state.linha);
+    els.iT.disabled = !state.linha;
+    els.stepCarro.classList.toggle('disabled', !state.linha);
+    els.iC.disabled = !state.linha;
     refreshSuggestLinha();
-    // Se o usuário digitou um código exato, avança
-    if (v && S().findLinha(v)){
-      // Não força avanço por digitação — só ao Enter ou ao tocar chip.
-    }
-    // Mas atualiza filtros das tabelas
+    // Limpa apenas Tabela (filtro depende da linha). Carro NÃO é zerado.
     setTabela('');
+    refreshOK();
   }
   function onTabelaInput(){
     state.tabela = els.iT.value.trim();
@@ -116,7 +120,7 @@
     setTimeout(() => els.iT.focus(), 50);
   }
   function focusCarro(){
-    if (!state.tabela) return;
+    if (!state.linha) return; // Tabela é opcional; Carro só exige Linha
     activate(els.stepCarro);
     setTimeout(() => els.iC.focus(), 50);
   }
@@ -172,13 +176,14 @@
   }
 
   function registrar(){
-    if (!state.linha || !state.tabela || !state.carro) return;
+    if (!state.linha || !state.carro) return; // Tabela opcional
     const reg = S().novaMarcacao({ linha: state.linha, tabela: state.tabela, carro: state.carro });
     lastReg = reg;
     showLast(reg);
+    const semTab = !state.tabela;
     Recolhida.toast(
       reg.classe === 'PENDENTE'
-        ? 'Registrado · classificação pendente'
+        ? (semTab ? 'Registrado sem tabela · pendente' : 'Registrado · classificação pendente')
         : `Registrado · ${reg.classe}` + (reg.desvioMin !== null ? ` (${C().fmtDesvio(reg.desvioMin)})` : ''),
       reg.classe === 'ADIANTADO' ? 'err' : (reg.classe === 'ATRASADO' ? 'warn' : '')
     );
@@ -200,12 +205,14 @@
     const cls = reg.classe.toLowerCase();
     els.lastPill.className = 'last-pill ' + cls;
     els.lastPill.textContent = reg.classe;
-    els.lastLT.textContent = `Linha ${reg.linha} · Tabela ${reg.tabela}`;
+    els.lastLT.textContent = `Linha ${reg.linha} · Tabela ${reg.tabela || '(sem tabela)'}`;
     els.lastCarro.textContent = reg.carro;
     els.lastHora.textContent = reg.hora;
     if (reg.desvioMin !== null){
       const t = S().findTabela(reg.linha, reg.tabela);
       els.lastDet.textContent = `Prev. ${t ? t.horaPrevista : '--:--'} · desvio ${C().fmtDesvio(reg.desvioMin)}`;
+    } else if (!reg.tabela){
+      els.lastDet.textContent = 'Sem tabela — preencha depois no Histórico → Pendentes.';
     } else {
       els.lastDet.textContent = 'Sem cadastro mestre — recalculará automaticamente.';
     }

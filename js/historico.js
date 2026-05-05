@@ -153,21 +153,51 @@
   function renderPendentes(all){
     const pen = all.filter(m => m.classe === 'PENDENTE');
     if (!pen.length){
-      els.pendentes.innerHTML = `<div class="muted small">Nenhum registro pendente. </div>`;
+      els.pendentes.innerHTML = `<div class="muted small">Nenhum registro pendente.</div>`;
       return;
     }
     const por = {};
     pen.forEach(m => {
-      const k = m.linha + '|' + m.tabela;
-      por[k] = por[k] || { linha:m.linha, tabela:m.tabela, qtd:0 };
+      const tabKey = m.tabela || '';
+      const k = m.linha + '|' + tabKey;
+      por[k] = por[k] || { linha:m.linha, tabela:tabKey, qtd:0 };
       por[k].qtd++;
     });
-    els.pendentes.innerHTML = Object.values(por).map(r => `
+    // Ordena: sem tabela primeiro (mais urgentes), depois por quantidade
+    const grupos = Object.values(por).sort((a,b) =>
+      (a.tabela ? 1 : 0) - (b.tabela ? 1 : 0) || b.qtd - a.qtd
+    );
+    els.pendentes.innerHTML = grupos.map((r, i) => {
+      const tabLabel = r.tabela ? `Tabela <strong>${r.tabela}</strong>` : `<em class="muted">sem tabela</em>`;
+      return `
       <div class="pend-item">
-        <div>Linha <strong>${r.linha}</strong> · Tabela <strong>${r.tabela}</strong></div>
-        <div class="muted">${r.qtd} marcaç${r.qtd===1?'ão':'ões'}</div>
-      </div>
-    `).join('');
+        <div>Linha <strong>${r.linha}</strong> · ${tabLabel} · <span class="muted">${r.qtd} marcaç${r.qtd===1?'ão':'ões'}</span></div>
+        <div class="pend-action">
+          <input type="text" inputmode="numeric"
+                 placeholder="${r.tabela ? 'Corrigir tabela' : 'Definir tabela'}"
+                 data-pend-idx="${i}" />
+          <button class="primary small" data-pend-apply="${i}">Aplicar</button>
+        </div>
+      </div>`;
+    }).join('');
+
+    els.pendentes.querySelectorAll('button[data-pend-apply]').forEach(b => {
+      b.addEventListener('click', () => {
+        const i = +b.dataset.pendApply;
+        const grupo = grupos[i];
+        const inp = els.pendentes.querySelector(`input[data-pend-idx="${i}"]`);
+        const nova = (inp.value || '').trim();
+        if (!nova){ Recolhida.toast('Digite a tabela', 'err'); inp.focus(); return; }
+        const n = S().updateTabelaEmMarcacoes(grupo.linha, grupo.tabela, nova);
+        const t = S().findTabela(grupo.linha, nova);
+        if (t){
+          Recolhida.toast(`${n} marcaç${n>1?'ões':'ão'} reclassificada${n>1?'s':''} (T${nova} → ${t.horaPrevista})`);
+        } else {
+          Recolhida.toast(`${n} marcaç${n>1?'ões':'ão'} atualizada${n>1?'s':''} · cadastre T${nova} no mestre p/ classificar`, 'warn');
+        }
+        refresh();
+      });
+    });
   }
 
   function formatDateBR(ymd){

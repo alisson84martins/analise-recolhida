@@ -1,5 +1,5 @@
 /* Service Worker — Análise de Recolhida (offline-first) */
-const CACHE = 'recolhida-v1';
+const CACHE = 'recolhida-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   './js/storage.js',
   './js/classify.js',
   './js/marcacao.js',
+  './js/lancar.js',
   './js/cadastros.js',
   './js/historico.js',
   './js/exportar.js',

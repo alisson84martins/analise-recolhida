@@ -27,6 +27,7 @@
 
   <nav class="tabs" role="tablist">
     <button class="tab active" data-view="marcacao" role="tab">Marcação</button>
+    <button class="tab" data-view="lancar" role="tab">Lançar</button>
     <button class="tab" data-view="historico" role="tab">Histórico</button>
     <button class="tab" data-view="cadastros" role="tab">Cadastros</button>
     <button class="tab" data-view="exportar" role="tab">Exportar</button>
@@ -56,14 +57,14 @@
       </div>
 
       <div class="step disabled" id="step-tabela">
-        <label class="step-label">2 — Tabela</label>
+        <label class="step-label">2 — Tabela <span class="opcional-tag">opcional · pode pular</span></label>
         <div class="input-row">
           <input
             id="input-tabela"
             type="text"
             inputmode="numeric"
             autocomplete="off"
-            placeholder="ex.: 12, 305"
+            placeholder="ex.: 12, 305 · ou pule"
             class="big-input"
             disabled
           />
@@ -107,9 +108,50 @@
 
       <div class="tip">
         <strong>Tolerância ±5 min.</strong>
-        <span class="muted">Carros buscados pelo manobrista NÃO devem ser registrados.</span>
+        <span class="muted">Tabela é opcional — se o motorista não souber, registre só Linha + Carro. Você completa depois em <em>Histórico → Pendentes</em>.</span>
       </div>
 
+    </section>
+
+    <!-- ============== LANÇAMENTO MANUAL ============== -->
+    <section id="view-lancar" class="view">
+      <div class="card">
+        <h3>Lançamento manual (com horário do papel)</h3>
+        <p class="muted small">
+          Use para subir as marcações que você fez no papel: a hora é digitada,
+          não é capturada agora. Linha e Carro obrigatórios — Tabela opcional.
+        </p>
+
+        <div class="form-row">
+          <label class="lbl-field">
+            <span class="muted small">Data</span>
+            <input id="lancar-data" type="date" />
+          </label>
+          <label class="lbl-field">
+            <span class="muted small">Hora</span>
+            <input id="lancar-hora" type="time" />
+          </label>
+          <button id="btn-lancar-hora-prox" class="ghost" type="button" title="+1 min">+1m</button>
+        </div>
+
+        <div class="form-row">
+          <input id="lancar-linha"  type="text" inputmode="text"    placeholder="Linha (ex.: 271)"    autocomplete="off" />
+          <input id="lancar-tabela" type="text" inputmode="numeric" placeholder="Tabela (opcional)"   autocomplete="off" />
+          <input id="lancar-carro"  type="text" inputmode="numeric" placeholder="Carro (ex.: 8421)"   autocomplete="off" />
+          <button id="btn-lancar" class="primary" type="button">Lançar</button>
+        </div>
+
+        <p class="muted small">
+          Atalhos: <strong>Enter</strong> no Carro lança · após cada lançamento, a hora avança 1 min e os campos Linha/Tabela/Carro são limpos.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Lançados nesta sessão</h3>
+        <div id="lancar-feed" class="lancar-feed">
+          <div class="muted small">Nenhum lançamento manual nesta sessão.</div>
+        </div>
+      </div>
     </section>
 
     <!-- ============== HISTÓRICO ============== -->
@@ -285,6 +327,7 @@
   <script src="js/storage.js"></script>
   <script src="js/classify.js"></script>
   <script src="js/marcacao.js"></script>
+  <script src="js/lancar.js"></script>
   <script src="js/cadastros.js"></script>
   <script src="js/historico.js"></script>
   <script src="js/exportar.js"></script>

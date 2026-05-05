@@ -46,7 +46,8 @@
       // Atualiza views ao entrar nelas
       if (v === 'historico' && Recolhida.historico) Recolhida.historico.refresh();
       if (v === 'cadastros' && Recolhida.cadastros) Recolhida.cadastros.refresh();
-      if (v === 'marcacao' && Recolhida.marcacao) Recolhida.marcacao.refresh();
+      if (v === 'marcacao'  && Recolhida.marcacao)  Recolhida.marcacao.refresh();
+      if (v === 'lancar'    && Recolhida.lancar)    Recolhida.lancar.refresh();
     }));
   }
 
@@ -75,6 +76,7 @@
     setInterval(tickClock, 15000);
     setupTabs();
     Recolhida.marcacao.init();
+    Recolhida.lancar.init();
     Recolhida.cadastros.init();
     Recolhida.historico.init();
     Recolhida.exportar.init();

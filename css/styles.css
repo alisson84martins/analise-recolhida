@@ -270,3 +270,58 @@ main{ padding: 12px; padding-bottom: 56px; max-width: 720px; margin: 0 auto }
 @media (min-width: 520px){
   .kpis{ grid-template-columns: repeat(4, 1fr) }
 }
+
+/* ====== Opcional / Lançamento manual / Pendentes ====== */
+.opcional-tag{
+  display:inline-block; margin-left:6px;
+  background: rgba(212,154,31,.18);
+  border:1px solid rgba(212,154,31,.5);
+  color:#ffd98a;
+  font-size:10px; font-weight:700;
+  padding: 2px 7px; border-radius: 999px;
+  letter-spacing:.5px; text-transform:uppercase;
+}
+
+.lbl-field{
+  display:flex; flex-direction:column; gap:4px; flex:1; min-width:120px;
+}
+.lbl-field input{
+  background: var(--bg-3); border:1px solid var(--borda); color: var(--txt);
+  border-radius: 8px; padding: 10px 12px;
+}
+
+.lancar-feed{ max-height: 360px; overflow:auto }
+.lancar-feed-header{
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom: 6px;
+}
+.lancar-list{ display:flex; flex-direction:column; gap:4px }
+.lancar-item{
+  display:grid; grid-template-columns: 56px 1fr auto auto; gap:8px;
+  align-items:center;
+  background: var(--bg-3); border:1px solid var(--borda);
+  border-radius: 8px; padding: 6px 10px; font-size: 13px;
+}
+.lancar-item .hora{ font-variant-numeric: tabular-nums; font-weight:700 }
+.lancar-item .lt{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+.lancar-item .carro{ color: var(--muted); font-variant-numeric: tabular-nums }
+.lancar-item .cls{
+  font-size: 10px; font-weight:800; letter-spacing:1px;
+  padding: 2px 6px; border-radius: 4px;
+}
+.lancar-item.adiantado .cls{ background: var(--vermelho); color:#fff }
+.lancar-item.pontual   .cls{ background: var(--verde);    color:#fff }
+.lancar-item.atrasado  .cls{ background: var(--amarelo);  color:#1c1300 }
+.lancar-item.pendente  .cls{ background: #4d5a63;         color:#fff }
+
+/* Editor de pendentes */
+.pendentes .pend-item{ flex-wrap:wrap; gap:6px }
+.pend-action{ display:flex; gap:6px; align-items:center; margin-left:auto }
+.pend-action input{
+  background: var(--bg-3); border:1px solid var(--borda); color: var(--txt);
+  border-radius: 6px; padding: 6px 8px; width: 110px;
+}
+.pend-action button.primary.small{
+  background: var(--primaria-2); color:#fff;
+  border-radius: 6px; padding: 6px 10px; font-weight:700; font-size:12px;
+}
