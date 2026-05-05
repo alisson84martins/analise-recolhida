@@ -61,9 +61,7 @@
     if (!linha){
       Recolhida.toast('Informe a linha', 'err'); els.linha.focus(); return;
     }
-    if (!carro){
-      Recolhida.toast('Informe o carro', 'err'); els.carro.focus(); return;
-    }
+    // Tabela e Carro são opcionais — se faltarem, registro fica pendente/incompleto
 
     // Constrói timestamp em horário LOCAL para não virar dia em UTC
     const [y, mo, d] = data.split('-').map(Number);
@@ -111,7 +109,7 @@
           <div class="lancar-item ${r.classe.toLowerCase()}">
             <span class="hora">${r.hora}</span>
             <span class="lt">L ${r.linha} ${r.tabela ? '· T '+r.tabela : '· s/ tab'}</span>
-            <span class="carro">#${r.carro}</span>
+            <span class="carro">${r.carro ? '#'+r.carro : 's/ carro'}</span>
             <span class="cls">${r.classe}</span>
           </div>
         `).join('')}

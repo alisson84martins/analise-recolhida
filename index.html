@@ -119,7 +119,8 @@
         <h3>Lançamento manual (com horário do papel)</h3>
         <p class="muted small">
           Use para subir as marcações que você fez no papel: a hora é digitada,
-          não é capturada agora. Linha e Carro obrigatórios — Tabela opcional.
+          não é capturada agora. <strong>Obrigatórios: Linha + Hora.</strong>
+          Tabela e Carro são opcionais (preencha o que tiver).
         </p>
 
         <div class="form-row">
@@ -135,9 +136,9 @@
         </div>
 
         <div class="form-row">
-          <input id="lancar-linha"  type="text" inputmode="text"    placeholder="Linha (ex.: 271)"    autocomplete="off" />
-          <input id="lancar-tabela" type="text" inputmode="numeric" placeholder="Tabela (opcional)"   autocomplete="off" />
-          <input id="lancar-carro"  type="text" inputmode="numeric" placeholder="Carro (ex.: 8421)"   autocomplete="off" />
+          <input id="lancar-linha"  type="text" inputmode="text"    placeholder="Linha (obrigatório)"  autocomplete="off" />
+          <input id="lancar-tabela" type="text" inputmode="numeric" placeholder="Tabela (opcional)"    autocomplete="off" />
+          <input id="lancar-carro"  type="text" inputmode="numeric" placeholder="Carro (opcional)"     autocomplete="off" />
           <button id="btn-lancar" class="primary" type="button">Lançar</button>
         </div>
 
