@@ -326,8 +326,9 @@
     pen.forEach(m => {
       const tabKey = m.tabela || '';
       const k = m.linha + '|' + tabKey;
-      por[k] = por[k] || { linha:m.linha, tabela:tabKey, qtd:0 };
+      por[k] = por[k] || { linha:m.linha, tabela:tabKey, qtd:0, ids:[] };
       por[k].qtd++;
+      por[k].ids.push(m.id);
     });
     // Ordena: sem tabela primeiro (mais urgentes), depois por quantidade
     const grupos = Object.values(por).sort((a,b) =>
@@ -339,10 +340,11 @@
       <div class="pend-item">
         <div>Linha <strong>${r.linha}</strong> · ${tabLabel} · <span class="muted">${r.qtd} marcaç${r.qtd===1?'ão':'ões'}</span></div>
         <div class="pend-action">
-          <input type="text" inputmode="numeric"
-                 placeholder="${r.tabela ? 'Corrigir tabela' : 'Definir tabela'}"
+          <input type="text" inputmode="text" autocomplete="off"
+                 placeholder="Nova linha"
                  data-pend-idx="${i}" />
-          <button class="primary small" data-pend-apply="${i}">Aplicar</button>
+          <button class="primary small" data-pend-apply="${i}">Corrigir linha</button>
+          <button class="warn small" data-pend-delete="${i}">Excluir</button>
         </div>
       </div>`;
     }).join('');
@@ -352,15 +354,29 @@
         const i = +b.dataset.pendApply;
         const grupo = grupos[i];
         const inp = els.pendentes.querySelector(`input[data-pend-idx="${i}"]`);
-        const nova = (inp.value || '').trim();
-        if (!nova){ Recolhida.toast('Digite a tabela', 'err'); inp.focus(); return; }
-        const n = S().updateTabelaEmMarcacoes(grupo.linha, grupo.tabela, nova);
-        const t = S().findTabela(grupo.linha, nova);
+        const novaLinha = (inp.value || '').trim();
+        if (!novaLinha){ Recolhida.toast('Digite a nova linha', 'err'); inp.focus(); return; }
+        let n = 0;
+        grupo.ids.forEach(id => {
+          if (S().updateMarcacao(id, { linha: novaLinha })) n++;
+        });
+        const t = grupo.tabela ? S().findTabela(novaLinha, grupo.tabela) : null;
         if (t){
-          Recolhida.toast(`${n} marcaç${n>1?'ões':'ão'} reclassificada${n>1?'s':''} (T${nova} → ${t.horaPrevista})`);
+          Recolhida.toast(`${n} marcaç${n>1?'ões':'ão'} corrigida${n>1?'s':''} para linha ${novaLinha} (T${grupo.tabela} → ${t.horaPrevista})`);
         } else {
-          Recolhida.toast(`${n} marcaç${n>1?'ões':'ão'} atualizada${n>1?'s':''} · cadastre T${nova} no mestre p/ classificar`, 'warn');
+          Recolhida.toast(`${n} marcaç${n>1?'ões':'ão'} corrigida${n>1?'s':''} para linha ${novaLinha} · sem tabela cadastrada para reclassificar`, 'warn');
         }
+        refresh();
+      });
+    });
+
+    els.pendentes.querySelectorAll('button[data-pend-delete]').forEach(b => {
+      b.addEventListener('click', () => {
+        const i = +b.dataset.pendDelete;
+        const grupo = grupos[i];
+        if (!confirm(`Excluir ${grupo.qtd} marcaç${grupo.qtd===1?'ão':'ões'} pendente${grupo.qtd===1?'':'s'} de Linha ${grupo.linha}${grupo.tabela ? ` / Tabela ${grupo.tabela}` : ''}?`)) return;
+        grupo.ids.forEach(id => S().deleteMarcacao(id));
+        Recolhida.toast('Marcaçã' + (grupo.qtd > 1 ? 'ões' : 'ão') + ' pendente' + (grupo.qtd > 1 ? 's' : '') + ' excluída' + (grupo.qtd > 1 ? 's' : ''), 'warn');
         refresh();
       });
     });

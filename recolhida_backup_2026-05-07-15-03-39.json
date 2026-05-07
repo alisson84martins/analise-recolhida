@@ -1,0 +1,5451 @@
+{
+  "__schema": "recolhida-sambaiba",
+  "__version": 1,
+  "__exportedAt": "2026-05-07T15:03:39.802Z",
+  "linhas": [
+    {
+      "codigo": "119C",
+      "nome": ""
+    },
+    {
+      "codigo": "172N",
+      "nome": ""
+    },
+    {
+      "codigo": "174 M",
+      "nome": ""
+    },
+    {
+      "codigo": "177H",
+      "nome": ""
+    },
+    {
+      "codigo": "178 A",
+      "nome": ""
+    },
+    {
+      "codigo": "178T",
+      "nome": ""
+    },
+    {
+      "codigo": "213 E",
+      "nome": ""
+    },
+    {
+      "codigo": "271 C",
+      "nome": ""
+    },
+    {
+      "codigo": "271 F",
+      "nome": ""
+    },
+    {
+      "codigo": "271 M",
+      "nome": ""
+    },
+    {
+      "codigo": "271 P",
+      "nome": ""
+    },
+    {
+      "codigo": "271A",
+      "nome": ""
+    },
+    {
+      "codigo": "271A 51",
+      "nome": ""
+    },
+    {
+      "codigo": "272 N",
+      "nome": ""
+    },
+    {
+      "codigo": "278 A",
+      "nome": ""
+    },
+    {
+      "codigo": "351 F",
+      "nome": ""
+    },
+    {
+      "codigo": "701 A",
+      "nome": ""
+    },
+    {
+      "codigo": "1156",
+      "nome": ""
+    },
+    {
+      "codigo": "1721",
+      "nome": ""
+    },
+    {
+      "codigo": "1726",
+      "nome": ""
+    },
+    {
+      "codigo": "1732",
+      "nome": ""
+    },
+    {
+      "codigo": "1764",
+      "nome": ""
+    },
+    {
+      "codigo": "1765",
+      "nome": ""
+    },
+    {
+      "codigo": "1767",
+      "nome": ""
+    },
+    {
+      "codigo": "1773",
+      "nome": ""
+    },
+    {
+      "codigo": "1778",
+      "nome": ""
+    },
+    {
+      "codigo": "1782",
+      "nome": ""
+    },
+    {
+      "codigo": "1783",
+      "nome": ""
+    },
+    {
+      "codigo": "2010",
+      "nome": ""
+    },
+    {
+      "codigo": "2011",
+      "nome": ""
+    },
+    {
+      "codigo": "2012",
+      "nome": ""
+    },
+    {
+      "codigo": "2023",
+      "nome": ""
+    },
+    {
+      "codigo": "2023 41",
+      "nome": ""
+    },
+    {
+      "codigo": "2023 42",
+      "nome": ""
+    },
+    {
+      "codigo": "2024",
+      "nome": ""
+    },
+    {
+      "codigo": "2025",
+      "nome": ""
+    },
+    {
+      "codigo": "2026",
+      "nome": ""
+    },
+    {
+      "codigo": "2032",
+      "nome": ""
+    },
+    {
+      "codigo": "2033",
+      "nome": ""
+    },
+    {
+      "codigo": "2034",
+      "nome": ""
+    },
+    {
+      "codigo": "2123",
+      "nome": ""
+    },
+    {
+      "codigo": "2127",
+      "nome": ""
+    },
+    {
+      "codigo": "2161",
+      "nome": ""
+    },
+    {
+      "codigo": "2175",
+      "nome": ""
+    },
+    {
+      "codigo": "2182",
+      "nome": ""
+    }
+  ],
+  "tabelas": [
+    {
+      "linha": "119C",
+      "tabela": "1",
+      "horaPrevista": "21:55"
+    },
+    {
+      "linha": "119C",
+      "tabela": "2",
+      "horaPrevista": "22:15"
+    },
+    {
+      "linha": "119C",
+      "tabela": "3",
+      "horaPrevista": "22:40"
+    },
+    {
+      "linha": "119C",
+      "tabela": "4",
+      "horaPrevista": "23:23"
+    },
+    {
+      "linha": "119C",
+      "tabela": "5",
+      "horaPrevista": "01:32"
+    },
+    {
+      "linha": "119C",
+      "tabela": "6",
+      "horaPrevista": "00:10"
+    },
+    {
+      "linha": "119C",
+      "tabela": "7",
+      "horaPrevista": "00:30"
+    },
+    {
+      "linha": "119C",
+      "tabela": "8",
+      "horaPrevista": "01:20"
+    },
+    {
+      "linha": "172N",
+      "tabela": "1",
+      "horaPrevista": "23:50"
+    },
+    {
+      "linha": "172N",
+      "tabela": "2",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "172N",
+      "tabela": "3",
+      "horaPrevista": "00:04"
+    },
+    {
+      "linha": "172N",
+      "tabela": "4",
+      "horaPrevista": "00:45"
+    },
+    {
+      "linha": "172N",
+      "tabela": "5",
+      "horaPrevista": "00:28"
+    },
+    {
+      "linha": "172N",
+      "tabela": "6",
+      "horaPrevista": "00:42"
+    },
+    {
+      "linha": "172N",
+      "tabela": "7",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "172N",
+      "tabela": "8",
+      "horaPrevista": "01:01"
+    },
+    {
+      "linha": "172N",
+      "tabela": "9",
+      "horaPrevista": "00:14"
+    },
+    {
+      "linha": "172N",
+      "tabela": "10",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "172N",
+      "tabela": "11",
+      "horaPrevista": "01:35"
+    },
+    {
+      "linha": "172N",
+      "tabela": "12",
+      "horaPrevista": "01:25"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "1",
+      "horaPrevista": "23:40"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "2",
+      "horaPrevista": "23:55"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "3",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "4",
+      "horaPrevista": "00:30"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "5",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "6",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "7",
+      "horaPrevista": "01:25"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "8",
+      "horaPrevista": "23:00"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "9",
+      "horaPrevista": "23:20"
+    },
+    {
+      "linha": "174 M",
+      "tabela": "10",
+      "horaPrevista": "01:45"
+    },
+    {
+      "linha": "177H",
+      "tabela": "1",
+      "horaPrevista": "23:43"
+    },
+    {
+      "linha": "177H",
+      "tabela": "2",
+      "horaPrevista": "00:01"
+    },
+    {
+      "linha": "177H",
+      "tabela": "3",
+      "horaPrevista": "00:24"
+    },
+    {
+      "linha": "177H",
+      "tabela": "4",
+      "horaPrevista": "00:42"
+    },
+    {
+      "linha": "177H",
+      "tabela": "5",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "177H",
+      "tabela": "6",
+      "horaPrevista": "02:00"
+    },
+    {
+      "linha": "177H",
+      "tabela": "7",
+      "horaPrevista": "02:35"
+    },
+    {
+      "linha": "177H",
+      "tabela": "8",
+      "horaPrevista": "00:03"
+    },
+    {
+      "linha": "177H",
+      "tabela": "9",
+      "horaPrevista": "01:55"
+    },
+    {
+      "linha": "177H",
+      "tabela": "10",
+      "horaPrevista": "00:34"
+    },
+    {
+      "linha": "177H",
+      "tabela": "11",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "177H",
+      "tabela": "12",
+      "horaPrevista": "01:40"
+    },
+    {
+      "linha": "178 A",
+      "tabela": "1",
+      "horaPrevista": "23:50"
+    },
+    {
+      "linha": "178 A",
+      "tabela": "2",
+      "horaPrevista": "22:15"
+    },
+    {
+      "linha": "178 A",
+      "tabela": "3",
+      "horaPrevista": "00:45"
+    },
+    {
+      "linha": "178 A",
+      "tabela": "4",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "178 A",
+      "tabela": "5",
+      "horaPrevista": "23:30"
+    },
+    {
+      "linha": "178 A",
+      "tabela": "6",
+      "horaPrevista": "01:15"
+    },
+    {
+      "linha": "178 A",
+      "tabela": "7",
+      "horaPrevista": "00:20"
+    },
+    {
+      "linha": "178T",
+      "tabela": "1",
+      "horaPrevista": "22:50"
+    },
+    {
+      "linha": "178T",
+      "tabela": "2",
+      "horaPrevista": "23:30"
+    },
+    {
+      "linha": "178T",
+      "tabela": "3",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "178T",
+      "tabela": "4",
+      "horaPrevista": "22:05"
+    },
+    {
+      "linha": "178T",
+      "tabela": "5",
+      "horaPrevista": "23:50"
+    },
+    {
+      "linha": "178T",
+      "tabela": "6",
+      "horaPrevista": "01:10"
+    },
+    {
+      "linha": "178T",
+      "tabela": "7",
+      "horaPrevista": "23:00"
+    },
+    {
+      "linha": "178T",
+      "tabela": "8",
+      "horaPrevista": "23:59"
+    },
+    {
+      "linha": "178T",
+      "tabela": "9",
+      "horaPrevista": "01:55"
+    },
+    {
+      "linha": "178T",
+      "tabela": "10",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "178T",
+      "tabela": "11",
+      "horaPrevista": "00:14"
+    },
+    {
+      "linha": "178T",
+      "tabela": "12",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "178T",
+      "tabela": "13",
+      "horaPrevista": "02:30"
+    },
+    {
+      "linha": "178T",
+      "tabela": "14",
+      "horaPrevista": "01:30"
+    },
+    {
+      "linha": "178T",
+      "tabela": "15",
+      "horaPrevista": "01:30"
+    },
+    {
+      "linha": "213 E",
+      "tabela": "1",
+      "horaPrevista": "21:35"
+    },
+    {
+      "linha": "213 E",
+      "tabela": "2",
+      "horaPrevista": "23:59"
+    },
+    {
+      "linha": "213 E",
+      "tabela": "3",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "213 E",
+      "tabela": "4",
+      "horaPrevista": "23:26"
+    },
+    {
+      "linha": "213 E",
+      "tabela": "5",
+      "horaPrevista": "01:12"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "1",
+      "horaPrevista": "00:08"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "2",
+      "horaPrevista": "00:27"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "3",
+      "horaPrevista": "01:00"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "4",
+      "horaPrevista": "23:30"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "5",
+      "horaPrevista": "01:20"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "6",
+      "horaPrevista": "01:22"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "7",
+      "horaPrevista": "18:50"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "8",
+      "horaPrevista": "19:55"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "9",
+      "horaPrevista": "20:30"
+    },
+    {
+      "linha": "271 F",
+      "tabela": "10",
+      "horaPrevista": "21:05"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "1",
+      "horaPrevista": "22:30"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "2",
+      "horaPrevista": "22:45"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "3",
+      "horaPrevista": "23:00"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "4",
+      "horaPrevista": "01:15"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "5",
+      "horaPrevista": "23:13"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "6",
+      "horaPrevista": "23:27"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "7",
+      "horaPrevista": "23:41"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "8",
+      "horaPrevista": "01:40"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "9",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "10",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "271 M",
+      "tabela": "11",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "1",
+      "horaPrevista": "23:50"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "2",
+      "horaPrevista": "00:05"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "3",
+      "horaPrevista": "00:20"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "4",
+      "horaPrevista": "00:40"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "5",
+      "horaPrevista": "00:05"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "6",
+      "horaPrevista": "23:10"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "7",
+      "horaPrevista": "23:30"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "8",
+      "horaPrevista": "23:50"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "9",
+      "horaPrevista": "23:30"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "10",
+      "horaPrevista": "01:00"
+    },
+    {
+      "linha": "271 P",
+      "tabela": "11",
+      "horaPrevista": "01:30"
+    },
+    {
+      "linha": "271A",
+      "tabela": "1",
+      "horaPrevista": "22:12"
+    },
+    {
+      "linha": "271A",
+      "tabela": "2",
+      "horaPrevista": "23:30"
+    },
+    {
+      "linha": "271A",
+      "tabela": "3",
+      "horaPrevista": "00:27"
+    },
+    {
+      "linha": "271A",
+      "tabela": "4",
+      "horaPrevista": "23:45"
+    },
+    {
+      "linha": "271A",
+      "tabela": "5",
+      "horaPrevista": "22:50"
+    },
+    {
+      "linha": "271A",
+      "tabela": "6",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "271A",
+      "tabela": "7",
+      "horaPrevista": "01:20"
+    },
+    {
+      "linha": "271A",
+      "tabela": "8",
+      "horaPrevista": "23:59"
+    },
+    {
+      "linha": "271A",
+      "tabela": "9",
+      "horaPrevista": "00:14"
+    },
+    {
+      "linha": "271A",
+      "tabela": "10",
+      "horaPrevista": "01:50"
+    },
+    {
+      "linha": "271A",
+      "tabela": "11",
+      "horaPrevista": "00:41"
+    },
+    {
+      "linha": "271A",
+      "tabela": "12",
+      "horaPrevista": "23:00"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "1",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "2",
+      "horaPrevista": "23:55"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "3",
+      "horaPrevista": "00:10"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "4",
+      "horaPrevista": "00:28"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "5",
+      "horaPrevista": "00:47"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "6",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "7",
+      "horaPrevista": "01:30"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "8",
+      "horaPrevista": "23:10"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "9",
+      "horaPrevista": "02:00"
+    },
+    {
+      "linha": "271A 51",
+      "tabela": "10",
+      "horaPrevista": "17:40"
+    },
+    {
+      "linha": "272 N",
+      "tabela": "1",
+      "horaPrevista": "00:36"
+    },
+    {
+      "linha": "272 N",
+      "tabela": "2",
+      "horaPrevista": "23:11"
+    },
+    {
+      "linha": "272 N",
+      "tabela": "3",
+      "horaPrevista": "00:56"
+    },
+    {
+      "linha": "272 N",
+      "tabela": "4",
+      "horaPrevista": "01:15"
+    },
+    {
+      "linha": "272 N",
+      "tabela": "5",
+      "horaPrevista": "00:11"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "1",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "2",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "3",
+      "horaPrevista": "23:50"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "4",
+      "horaPrevista": "23:00"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "5",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "6",
+      "horaPrevista": "23:20"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "7",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "8",
+      "horaPrevista": "01:55"
+    },
+    {
+      "linha": "278 A",
+      "tabela": "9",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "1",
+      "horaPrevista": "23:15"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "2",
+      "horaPrevista": "22:50"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "3",
+      "horaPrevista": "23:40"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "4",
+      "horaPrevista": "23:10"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "5",
+      "horaPrevista": "23:55"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "6",
+      "horaPrevista": "01:35"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "7",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "8",
+      "horaPrevista": "22:50"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "9",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "10",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "11",
+      "horaPrevista": "01:15"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "12",
+      "horaPrevista": "02:00"
+    },
+    {
+      "linha": "351 F",
+      "tabela": "13",
+      "horaPrevista": "01:10"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "1",
+      "horaPrevista": "22:35"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "2",
+      "horaPrevista": "22:55"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "3",
+      "horaPrevista": "01:45"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "4",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "5",
+      "horaPrevista": "23:55"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "6",
+      "horaPrevista": "20:10"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "7",
+      "horaPrevista": "20:25"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "8",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "9",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "10",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "11",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "12",
+      "horaPrevista": "01:25"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "13",
+      "horaPrevista": "22:00"
+    },
+    {
+      "linha": "701 A",
+      "tabela": "14",
+      "horaPrevista": "22:15"
+    },
+    {
+      "linha": "1156",
+      "tabela": "1",
+      "horaPrevista": "23:58"
+    },
+    {
+      "linha": "1156",
+      "tabela": "2",
+      "horaPrevista": "22:25"
+    },
+    {
+      "linha": "1156",
+      "tabela": "3",
+      "horaPrevista": "22:45"
+    },
+    {
+      "linha": "1156",
+      "tabela": "4",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "1156",
+      "tabela": "5",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "1156",
+      "tabela": "6",
+      "horaPrevista": "23:25"
+    },
+    {
+      "linha": "1156",
+      "tabela": "7",
+      "horaPrevista": "01:15"
+    },
+    {
+      "linha": "1156",
+      "tabela": "8",
+      "horaPrevista": "00:20"
+    },
+    {
+      "linha": "1156",
+      "tabela": "9",
+      "horaPrevista": "21:45"
+    },
+    {
+      "linha": "1156",
+      "tabela": "10",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "1721",
+      "tabela": "1",
+      "horaPrevista": "21:25"
+    },
+    {
+      "linha": "1721",
+      "tabela": "2",
+      "horaPrevista": "21:44"
+    },
+    {
+      "linha": "1721",
+      "tabela": "3",
+      "horaPrevista": "22:12"
+    },
+    {
+      "linha": "1721",
+      "tabela": "4",
+      "horaPrevista": "21:57"
+    },
+    {
+      "linha": "1721",
+      "tabela": "5",
+      "horaPrevista": "22:29"
+    },
+    {
+      "linha": "1721",
+      "tabela": "6",
+      "horaPrevista": "23:37"
+    },
+    {
+      "linha": "1721",
+      "tabela": "7",
+      "horaPrevista": "21:15"
+    },
+    {
+      "linha": "1721",
+      "tabela": "8",
+      "horaPrevista": "23:51"
+    },
+    {
+      "linha": "1721",
+      "tabela": "9",
+      "horaPrevista": "00:10"
+    },
+    {
+      "linha": "1721",
+      "tabela": "10",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "1721",
+      "tabela": "11",
+      "horaPrevista": "19:06"
+    },
+    {
+      "linha": "1721",
+      "tabela": "12",
+      "horaPrevista": "21:32"
+    },
+    {
+      "linha": "1726",
+      "tabela": "1",
+      "horaPrevista": "23:00"
+    },
+    {
+      "linha": "1726",
+      "tabela": "2",
+      "horaPrevista": "23:15"
+    },
+    {
+      "linha": "1726",
+      "tabela": "3",
+      "horaPrevista": "23:25"
+    },
+    {
+      "linha": "1726",
+      "tabela": "4",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "1726",
+      "tabela": "5",
+      "horaPrevista": "23:45"
+    },
+    {
+      "linha": "1726",
+      "tabela": "6",
+      "horaPrevista": "23:55"
+    },
+    {
+      "linha": "1726",
+      "tabela": "7",
+      "horaPrevista": "00:02"
+    },
+    {
+      "linha": "1726",
+      "tabela": "8",
+      "horaPrevista": "01:45"
+    },
+    {
+      "linha": "1726",
+      "tabela": "9",
+      "horaPrevista": "22:10"
+    },
+    {
+      "linha": "1726",
+      "tabela": "10",
+      "horaPrevista": "00:26"
+    },
+    {
+      "linha": "1726",
+      "tabela": "11",
+      "horaPrevista": "22:40"
+    },
+    {
+      "linha": "1726",
+      "tabela": "12",
+      "horaPrevista": "00:38"
+    },
+    {
+      "linha": "1726",
+      "tabela": "13",
+      "horaPrevista": "22:50"
+    },
+    {
+      "linha": "1726",
+      "tabela": "14",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "1726",
+      "tabela": "15",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "1726",
+      "tabela": "16",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "1726",
+      "tabela": "17",
+      "horaPrevista": "01:25"
+    },
+    {
+      "linha": "1726",
+      "tabela": "19",
+      "horaPrevista": "21:40"
+    },
+    {
+      "linha": "1732",
+      "tabela": "1",
+      "horaPrevista": "00:01"
+    },
+    {
+      "linha": "1732",
+      "tabela": "2",
+      "horaPrevista": "00:19"
+    },
+    {
+      "linha": "1732",
+      "tabela": "3",
+      "horaPrevista": "00:37"
+    },
+    {
+      "linha": "1732",
+      "tabela": "4",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "1732",
+      "tabela": "5",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "1732",
+      "tabela": "6",
+      "horaPrevista": "01:20"
+    },
+    {
+      "linha": "1732",
+      "tabela": "7",
+      "horaPrevista": "23:24"
+    },
+    {
+      "linha": "1732",
+      "tabela": "8",
+      "horaPrevista": "01:45"
+    },
+    {
+      "linha": "1732",
+      "tabela": "9",
+      "horaPrevista": "23:42"
+    },
+    {
+      "linha": "1764",
+      "tabela": "1",
+      "horaPrevista": "21:38"
+    },
+    {
+      "linha": "1764",
+      "tabela": "2",
+      "horaPrevista": "22:35"
+    },
+    {
+      "linha": "1764",
+      "tabela": "3",
+      "horaPrevista": "22:50"
+    },
+    {
+      "linha": "1764",
+      "tabela": "4",
+      "horaPrevista": "23:20"
+    },
+    {
+      "linha": "1764",
+      "tabela": "5",
+      "horaPrevista": "01:20"
+    },
+    {
+      "linha": "1764",
+      "tabela": "6",
+      "horaPrevista": "23:48"
+    },
+    {
+      "linha": "1764",
+      "tabela": "7",
+      "horaPrevista": "01:40"
+    },
+    {
+      "linha": "1764",
+      "tabela": "8",
+      "horaPrevista": "00:02"
+    },
+    {
+      "linha": "1764",
+      "tabela": "9",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "1764",
+      "tabela": "10",
+      "horaPrevista": "02:00"
+    },
+    {
+      "linha": "1764",
+      "tabela": "11",
+      "horaPrevista": "00:45"
+    },
+    {
+      "linha": "1764",
+      "tabela": "12",
+      "horaPrevista": "01:03"
+    },
+    {
+      "linha": "1765",
+      "tabela": "1",
+      "horaPrevista": "21:50"
+    },
+    {
+      "linha": "1765",
+      "tabela": "2",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "1765",
+      "tabela": "3",
+      "horaPrevista": "23:30"
+    },
+    {
+      "linha": "1765",
+      "tabela": "4",
+      "horaPrevista": "23:59"
+    },
+    {
+      "linha": "1765",
+      "tabela": "5",
+      "horaPrevista": "01:30"
+    },
+    {
+      "linha": "1765",
+      "tabela": "6",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "1765",
+      "tabela": "7",
+      "horaPrevista": "20:20"
+    },
+    {
+      "linha": "1765",
+      "tabela": "8",
+      "horaPrevista": "21:15"
+    },
+    {
+      "linha": "1767",
+      "tabela": "1",
+      "horaPrevista": "21:49"
+    },
+    {
+      "linha": "1767",
+      "tabela": "2",
+      "horaPrevista": "22:17"
+    },
+    {
+      "linha": "1767",
+      "tabela": "3",
+      "horaPrevista": "22:45"
+    },
+    {
+      "linha": "1767",
+      "tabela": "4",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "1767",
+      "tabela": "5",
+      "horaPrevista": "23:25"
+    },
+    {
+      "linha": "1767",
+      "tabela": "6",
+      "horaPrevista": "00:54"
+    },
+    {
+      "linha": "1767",
+      "tabela": "7",
+      "horaPrevista": "01:12"
+    },
+    {
+      "linha": "1767",
+      "tabela": "8",
+      "horaPrevista": "00:35"
+    },
+    {
+      "linha": "1773",
+      "tabela": "1",
+      "horaPrevista": "23:40"
+    },
+    {
+      "linha": "1773",
+      "tabela": "2",
+      "horaPrevista": "23:00"
+    },
+    {
+      "linha": "1773",
+      "tabela": "3",
+      "horaPrevista": "00:37"
+    },
+    {
+      "linha": "1773",
+      "tabela": "4",
+      "horaPrevista": "23:37"
+    },
+    {
+      "linha": "1773",
+      "tabela": "5",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "1773",
+      "tabela": "6",
+      "horaPrevista": "01:14"
+    },
+    {
+      "linha": "1773",
+      "tabela": "7",
+      "horaPrevista": "01:36"
+    },
+    {
+      "linha": "1773",
+      "tabela": "8",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "1773",
+      "tabela": "9",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "1778",
+      "tabela": "1",
+      "horaPrevista": "23:11"
+    },
+    {
+      "linha": "1778",
+      "tabela": "2",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "1778",
+      "tabela": "3",
+      "horaPrevista": "01:15"
+    },
+    {
+      "linha": "1778",
+      "tabela": "4",
+      "horaPrevista": "00:26"
+    },
+    {
+      "linha": "1782",
+      "tabela": "1",
+      "horaPrevista": "22:26"
+    },
+    {
+      "linha": "1782",
+      "tabela": "2",
+      "horaPrevista": "23:56"
+    },
+    {
+      "linha": "1782",
+      "tabela": "3",
+      "horaPrevista": "23:01"
+    },
+    {
+      "linha": "1782",
+      "tabela": "4",
+      "horaPrevista": "00:30"
+    },
+    {
+      "linha": "1782",
+      "tabela": "5",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "1782",
+      "tabela": "6",
+      "horaPrevista": "23:40"
+    },
+    {
+      "linha": "1782",
+      "tabela": "7",
+      "horaPrevista": "01:21"
+    },
+    {
+      "linha": "1783",
+      "tabela": "1",
+      "horaPrevista": "22:38"
+    },
+    {
+      "linha": "1783",
+      "tabela": "2",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "1783",
+      "tabela": "3",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "1783",
+      "tabela": "4",
+      "horaPrevista": "23:20"
+    },
+    {
+      "linha": "1783",
+      "tabela": "5",
+      "horaPrevista": "23:50"
+    },
+    {
+      "linha": "1783",
+      "tabela": "6",
+      "horaPrevista": "00:05"
+    },
+    {
+      "linha": "1783",
+      "tabela": "7",
+      "horaPrevista": "22:27"
+    },
+    {
+      "linha": "1783",
+      "tabela": "8",
+      "horaPrevista": "01:50"
+    },
+    {
+      "linha": "1783",
+      "tabela": "9",
+      "horaPrevista": "00:37"
+    },
+    {
+      "linha": "1783",
+      "tabela": "10",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "1783",
+      "tabela": "11",
+      "horaPrevista": "01:20"
+    },
+    {
+      "linha": "2011",
+      "tabela": "1",
+      "horaPrevista": "22:10"
+    },
+    {
+      "linha": "2011",
+      "tabela": "2",
+      "horaPrevista": "22:35"
+    },
+    {
+      "linha": "2011",
+      "tabela": "3",
+      "horaPrevista": "23:05"
+    },
+    {
+      "linha": "2011",
+      "tabela": "4",
+      "horaPrevista": "23:20"
+    },
+    {
+      "linha": "2011",
+      "tabela": "5",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "2011",
+      "tabela": "6",
+      "horaPrevista": "23:25"
+    },
+    {
+      "linha": "2011",
+      "tabela": "7",
+      "horaPrevista": "23:55"
+    },
+    {
+      "linha": "2011",
+      "tabela": "8",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "2011",
+      "tabela": "9",
+      "horaPrevista": "00:36"
+    },
+    {
+      "linha": "2011",
+      "tabela": "10",
+      "horaPrevista": "00:05"
+    },
+    {
+      "linha": "2011",
+      "tabela": "11",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "2011",
+      "tabela": "12",
+      "horaPrevista": "00:30"
+    },
+    {
+      "linha": "2011",
+      "tabela": "13",
+      "horaPrevista": "01:10"
+    },
+    {
+      "linha": "2012",
+      "tabela": "1",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "2012",
+      "tabela": "2",
+      "horaPrevista": "00:41"
+    },
+    {
+      "linha": "2012",
+      "tabela": "3",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "2023",
+      "tabela": "1",
+      "horaPrevista": "23:51"
+    },
+    {
+      "linha": "2023",
+      "tabela": "2",
+      "horaPrevista": "00:04"
+    },
+    {
+      "linha": "2023",
+      "tabela": "3",
+      "horaPrevista": "22:55"
+    },
+    {
+      "linha": "2023",
+      "tabela": "4",
+      "horaPrevista": "00:36"
+    },
+    {
+      "linha": "2023",
+      "tabela": "5",
+      "horaPrevista": "01:00"
+    },
+    {
+      "linha": "2023",
+      "tabela": "6",
+      "horaPrevista": "23:13"
+    },
+    {
+      "linha": "2023",
+      "tabela": "7",
+      "horaPrevista": "23:32"
+    },
+    {
+      "linha": "2023",
+      "tabela": "8",
+      "horaPrevista": "22:35"
+    },
+    {
+      "linha": "2023",
+      "tabela": "9",
+      "horaPrevista": "01:33"
+    },
+    {
+      "linha": "2023 41",
+      "tabela": "1",
+      "horaPrevista": "21:15"
+    },
+    {
+      "linha": "2023 41",
+      "tabela": "2",
+      "horaPrevista": "20:50"
+    },
+    {
+      "linha": "2023 41",
+      "tabela": "3",
+      "horaPrevista": "22:00"
+    },
+    {
+      "linha": "2023 42",
+      "tabela": "1",
+      "horaPrevista": "20:00"
+    },
+    {
+      "linha": "2023 42",
+      "tabela": "2",
+      "horaPrevista": "20:30"
+    },
+    {
+      "linha": "2023 42",
+      "tabela": "3",
+      "horaPrevista": "20:55"
+    },
+    {
+      "linha": "2024",
+      "tabela": "1",
+      "horaPrevista": "00:30"
+    },
+    {
+      "linha": "2032",
+      "tabela": "1",
+      "horaPrevista": "22:02"
+    },
+    {
+      "linha": "2032",
+      "tabela": "2",
+      "horaPrevista": "23:19"
+    },
+    {
+      "linha": "2032",
+      "tabela": "3",
+      "horaPrevista": "22:38"
+    },
+    {
+      "linha": "2032",
+      "tabela": "4",
+      "horaPrevista": "23:50"
+    },
+    {
+      "linha": "2032",
+      "tabela": "5",
+      "horaPrevista": "00:40"
+    },
+    {
+      "linha": "2032",
+      "tabela": "6",
+      "horaPrevista": "00:16"
+    },
+    {
+      "linha": "2032",
+      "tabela": "8",
+      "horaPrevista": "21:15"
+    },
+    {
+      "linha": "2033",
+      "tabela": "1",
+      "horaPrevista": "23:38"
+    },
+    {
+      "linha": "2033",
+      "tabela": "2",
+      "horaPrevista": "00:01"
+    },
+    {
+      "linha": "2033",
+      "tabela": "3",
+      "horaPrevista": "00:28"
+    },
+    {
+      "linha": "2033",
+      "tabela": "4",
+      "horaPrevista": "22:45"
+    },
+    {
+      "linha": "2033",
+      "tabela": "5",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "2033",
+      "tabela": "6",
+      "horaPrevista": "01:25"
+    },
+    {
+      "linha": "2034",
+      "tabela": "1",
+      "horaPrevista": "19:45"
+    },
+    {
+      "linha": "2034",
+      "tabela": "2",
+      "horaPrevista": "20:10"
+    },
+    {
+      "linha": "2034",
+      "tabela": "3",
+      "horaPrevista": "20:25"
+    },
+    {
+      "linha": "2123",
+      "tabela": "1",
+      "horaPrevista": "22:37"
+    },
+    {
+      "linha": "2123",
+      "tabela": "2",
+      "horaPrevista": "00:27"
+    },
+    {
+      "linha": "2123",
+      "tabela": "3",
+      "horaPrevista": "23:18"
+    },
+    {
+      "linha": "2123",
+      "tabela": "4",
+      "horaPrevista": "23:36"
+    },
+    {
+      "linha": "2123",
+      "tabela": "5",
+      "horaPrevista": "23:54"
+    },
+    {
+      "linha": "2123",
+      "tabela": "6",
+      "horaPrevista": "00:12"
+    },
+    {
+      "linha": "2123",
+      "tabela": "7",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "2123",
+      "tabela": "8",
+      "horaPrevista": "01:20"
+    },
+    {
+      "linha": "2127",
+      "tabela": "1",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "2127",
+      "tabela": "2",
+      "horaPrevista": "23:55"
+    },
+    {
+      "linha": "2127",
+      "tabela": "3",
+      "horaPrevista": "22:05"
+    },
+    {
+      "linha": "2127",
+      "tabela": "4",
+      "horaPrevista": "00:15"
+    },
+    {
+      "linha": "2127",
+      "tabela": "5",
+      "horaPrevista": "00:30"
+    },
+    {
+      "linha": "2127",
+      "tabela": "6",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "2127",
+      "tabela": "7",
+      "horaPrevista": "01:10"
+    },
+    {
+      "linha": "2127",
+      "tabela": "8",
+      "horaPrevista": "01:20"
+    },
+    {
+      "linha": "2161",
+      "tabela": "1",
+      "horaPrevista": "22:36"
+    },
+    {
+      "linha": "2161",
+      "tabela": "2",
+      "horaPrevista": "22:55"
+    },
+    {
+      "linha": "2161",
+      "tabela": "3",
+      "horaPrevista": "23:15"
+    },
+    {
+      "linha": "2161",
+      "tabela": "4",
+      "horaPrevista": "23:35"
+    },
+    {
+      "linha": "2161",
+      "tabela": "5",
+      "horaPrevista": "01:30"
+    },
+    {
+      "linha": "2161",
+      "tabela": "6",
+      "horaPrevista": "00:13"
+    },
+    {
+      "linha": "2161",
+      "tabela": "7",
+      "horaPrevista": "00:30"
+    },
+    {
+      "linha": "2161",
+      "tabela": "8",
+      "horaPrevista": "00:50"
+    },
+    {
+      "linha": "2161",
+      "tabela": "9",
+      "horaPrevista": "01:25"
+    },
+    {
+      "linha": "2175",
+      "tabela": "1",
+      "horaPrevista": "00:30"
+    },
+    {
+      "linha": "2175",
+      "tabela": "2",
+      "horaPrevista": "22:42"
+    },
+    {
+      "linha": "2175",
+      "tabela": "3",
+      "horaPrevista": "00:55"
+    },
+    {
+      "linha": "2175",
+      "tabela": "4",
+      "horaPrevista": "23:15"
+    },
+    {
+      "linha": "2175",
+      "tabela": "5",
+      "horaPrevista": "01:35"
+    },
+    {
+      "linha": "2175",
+      "tabela": "6",
+      "horaPrevista": "00:10"
+    },
+    {
+      "linha": "2182",
+      "tabela": "1",
+      "horaPrevista": "22:07"
+    },
+    {
+      "linha": "2182",
+      "tabela": "2",
+      "horaPrevista": "22:32"
+    },
+    {
+      "linha": "2182",
+      "tabela": "3",
+      "horaPrevista": "22:46"
+    },
+    {
+      "linha": "2182",
+      "tabela": "4",
+      "horaPrevista": "23:07"
+    },
+    {
+      "linha": "2182",
+      "tabela": "5",
+      "horaPrevista": "23:36"
+    },
+    {
+      "linha": "2182",
+      "tabela": "6",
+      "horaPrevista": "01:05"
+    },
+    {
+      "linha": "2182",
+      "tabela": "7",
+      "horaPrevista": "23:27"
+    },
+    {
+      "linha": "2182",
+      "tabela": "8",
+      "horaPrevista": "00:05"
+    },
+    {
+      "linha": "2182",
+      "tabela": "9",
+      "horaPrevista": "00:25"
+    },
+    {
+      "linha": "2182",
+      "tabela": "10",
+      "horaPrevista": "00:05"
+    },
+    {
+      "linha": "2182",
+      "tabela": "11",
+      "horaPrevista": "22:56"
+    },
+    {
+      "linha": "2182",
+      "tabela": "12",
+      "horaPrevista": "00:45"
+    },
+    {
+      "linha": "2182",
+      "tabela": "13",
+      "horaPrevista": "00:41"
+    },
+    {
+      "linha": "2182",
+      "tabela": "14",
+      "horaPrevista": "23:21"
+    }
+  ],
+  "carros": [
+    "1011",
+    "1016",
+    "1017",
+    "1021",
+    "1026",
+    "1027",
+    "1031",
+    "1032",
+    "1035",
+    "1038",
+    "1039",
+    "1041",
+    "1042",
+    "1305",
+    "1309",
+    "1327",
+    "1328",
+    "1332",
+    "1333",
+    "1334",
+    "1352",
+    "1355",
+    "1360",
+    "1361",
+    "1363",
+    "1365",
+    "1368",
+    "1371",
+    "1377",
+    "1379",
+    "1380",
+    "1385",
+    "1389",
+    "1398",
+    "1400",
+    "1431",
+    "1432",
+    "1436",
+    "1437",
+    "1438",
+    "1439",
+    "1440",
+    "1441",
+    "1445",
+    "1708",
+    "1709",
+    "1710",
+    "1711",
+    "1713",
+    "1714",
+    "1717",
+    "1720",
+    "1722",
+    "1725",
+    "1730",
+    "1733",
+    "1736",
+    "1739",
+    "1740",
+    "1742",
+    "1748",
+    "1749",
+    "1750",
+    "1752",
+    "1755",
+    "1757",
+    "1760",
+    "1762",
+    "1766",
+    "1770",
+    "1909",
+    "1947",
+    "1950",
+    "1963",
+    "1964",
+    "1965",
+    "1967",
+    "1971",
+    "2124",
+    "2127",
+    "2140",
+    "2141",
+    "2277",
+    "2279",
+    "2280",
+    "2282",
+    "2284",
+    "2286",
+    "2287",
+    "2291",
+    "2292",
+    "2294",
+    "2299",
+    "2342",
+    "2345",
+    "2388",
+    "2394",
+    "2396",
+    "2397",
+    "2462",
+    "2463",
+    "2469",
+    "2474",
+    "2493",
+    "2495",
+    "2499",
+    "2522",
+    "2524",
+    "2526",
+    "2530",
+    "2531",
+    "2533",
+    "2538",
+    "2542",
+    "2545",
+    "2547",
+    "2611",
+    "2618",
+    "2621",
+    "2637",
+    "2639",
+    "2643",
+    "2644",
+    "2647",
+    "2648",
+    "2649",
+    "2650",
+    "2697",
+    "2701",
+    "2706",
+    "2708",
+    "2710",
+    "2711",
+    "2712",
+    "2715",
+    "2717",
+    "2718",
+    "2723",
+    "2730",
+    "2737",
+    "2739",
+    "2740",
+    "2745",
+    "2750",
+    "2776",
+    "2777",
+    "2778",
+    "2780",
+    "2781",
+    "2785",
+    "2786",
+    "2788",
+    "2791",
+    "2792",
+    "2794",
+    "2796",
+    "2798",
+    "2802",
+    "2805",
+    "2806",
+    "2807",
+    "2810",
+    "2811",
+    "2820",
+    "2827",
+    "2828",
+    "2829",
+    "2831",
+    "2834",
+    "2836",
+    "2837",
+    "2838",
+    "2840",
+    "2841",
+    "2842",
+    "2844",
+    "2845",
+    "2849",
+    "2850",
+    "2854",
+    "32851"
+  ],
+  "marcacoes": [
+    {
+      "id": "m_1777943940000_2ywjd",
+      "ts": 1777943940000,
+      "data": "2026-05-04",
+      "hora": "22:19",
+      "linha": "1721",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": 7,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777943940000_pjpyf",
+      "ts": 1777943940000,
+      "data": "2026-05-04",
+      "hora": "22:19",
+      "linha": "2025",
+      "tabela": "6",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777943940000_94srh",
+      "ts": 1777943940000,
+      "data": "2026-05-04",
+      "hora": "22:19",
+      "linha": "1764",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": -16,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777944060000_9tnyx",
+      "ts": 1777944060000,
+      "data": "2026-05-04",
+      "hora": "22:21",
+      "linha": "2010",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777944120000_f480t",
+      "ts": 1777944120000,
+      "data": "2026-05-04",
+      "hora": "22:22",
+      "linha": "174 m",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": -78,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777944300000_h1y5z",
+      "ts": 1777944300000,
+      "data": "2026-05-04",
+      "hora": "22:25",
+      "linha": "1783",
+      "tabela": "7",
+      "carro": "",
+      "desvioMin": -2,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777944600000_y54zh",
+      "ts": 1777944600000,
+      "data": "2026-05-04",
+      "hora": "22:30",
+      "linha": "1721",
+      "tabela": "5",
+      "carro": "",
+      "desvioMin": 1,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777944600000_88cbt",
+      "ts": 1777944600000,
+      "data": "2026-05-04",
+      "hora": "22:30",
+      "linha": "178 T",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777944600000_fkghv",
+      "ts": 1777944600000,
+      "data": "2026-05-04",
+      "hora": "22:30",
+      "linha": "1764",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": -20,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777944780000_s44xd",
+      "ts": 1777944780000,
+      "data": "2026-05-04",
+      "hora": "22:33",
+      "linha": "1156",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": 8,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777944840000_q8mk4",
+      "ts": 1777944840000,
+      "data": "2026-05-04",
+      "hora": "22:34",
+      "linha": "2025",
+      "tabela": "",
+      "carro": "2829",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777944840000_2ed6p",
+      "ts": 1777944840000,
+      "data": "2026-05-04",
+      "hora": "22:34",
+      "linha": "271 M",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": -11,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777944900000_bjhrc",
+      "ts": 1777944900000,
+      "data": "2026-05-04",
+      "hora": "22:35",
+      "linha": "1726",
+      "tabela": "13",
+      "carro": "",
+      "desvioMin": -15,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777944960000_gdubx",
+      "ts": 1777944960000,
+      "data": "2026-05-04",
+      "hora": "22:36",
+      "linha": "1726",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": -24,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945020000_a906c",
+      "ts": 1777945020000,
+      "data": "2026-05-04",
+      "hora": "22:37",
+      "linha": "2182",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": 5,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777945020000_41r3z",
+      "ts": 1777945020000,
+      "data": "2026-05-04",
+      "hora": "22:37",
+      "linha": "351f",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945080000_nrrqh",
+      "ts": 1777945080000,
+      "data": "2026-05-04",
+      "hora": "22:38",
+      "linha": "271p",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945140000_m3p6w",
+      "ts": 1777945140000,
+      "data": "2026-05-04",
+      "hora": "22:39",
+      "linha": "271 m",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": 9,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945200000_u7arq",
+      "ts": 1777945200000,
+      "data": "2026-05-04",
+      "hora": "22:40",
+      "linha": "119c",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": 0,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777945260000_l5jem",
+      "ts": 1777945260000,
+      "data": "2026-05-04",
+      "hora": "22:41",
+      "linha": "178 t",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945320000_765nw",
+      "ts": 1777945320000,
+      "data": "2026-05-04",
+      "hora": "22:42",
+      "linha": "2175",
+      "tabela": "",
+      "carro": "2522",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945320000_zb06u",
+      "ts": 1777945320000,
+      "data": "2026-05-04",
+      "hora": "22:42",
+      "linha": "2011",
+      "tabela": "",
+      "carro": "2834",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945380000_u04g9",
+      "ts": 1777945380000,
+      "data": "2026-05-04",
+      "hora": "22:43",
+      "linha": "119c",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": 28,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945440000_uqsrn",
+      "ts": 1777945440000,
+      "data": "2026-05-04",
+      "hora": "22:44",
+      "linha": "1767",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": -1,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777945500000_9qqy8",
+      "ts": 1777945500000,
+      "data": "2026-05-04",
+      "hora": "22:45",
+      "linha": "278a",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945680000_0ff55",
+      "ts": 1777945680000,
+      "data": "2026-05-04",
+      "hora": "22:48",
+      "linha": "2032",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": 10,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945680000_bauqf",
+      "ts": 1777945680000,
+      "data": "2026-05-04",
+      "hora": "22:48",
+      "linha": "351f",
+      "tabela": "",
+      "carro": "2841",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945680000_t0aze",
+      "ts": 1777945680000,
+      "data": "2026-05-04",
+      "hora": "22:48",
+      "linha": "271 c",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945740000_ifdd5",
+      "ts": 1777945740000,
+      "data": "2026-05-04",
+      "hora": "22:49",
+      "linha": "2025",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777945800000_h8oaw",
+      "ts": 1777945800000,
+      "data": "2026-05-04",
+      "hora": "22:50",
+      "linha": "1732",
+      "tabela": "5",
+      "carro": "",
+      "desvioMin": -15,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945860000_crr45",
+      "ts": 1777945860000,
+      "data": "2026-05-04",
+      "hora": "22:51",
+      "linha": "1782",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945920000_6qa2m",
+      "ts": 1777945920000,
+      "data": "2026-05-04",
+      "hora": "22:52",
+      "linha": "2161",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777945920000_6be4t",
+      "ts": 1777945920000,
+      "data": "2026-05-04",
+      "hora": "22:52",
+      "linha": "174 m",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": -98,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945920000_brsdw",
+      "ts": 1777945920000,
+      "data": "2026-05-04",
+      "hora": "22:52",
+      "linha": "2161",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": 16,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945980000_gw26p",
+      "ts": 1777945980000,
+      "data": "2026-05-04",
+      "hora": "22:53",
+      "linha": "1156",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": -12,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777945980000_6j7wf",
+      "ts": 1777945980000,
+      "data": "2026-05-04",
+      "hora": "22:53",
+      "linha": "271 A",
+      "tabela": "12",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946040000_1bo0p",
+      "ts": 1777946040000,
+      "data": "2026-05-04",
+      "hora": "22:54",
+      "linha": "1773",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": -6,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946040000_lmn9f",
+      "ts": 1777946040000,
+      "data": "2026-05-04",
+      "hora": "22:54",
+      "linha": "1156",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": 9,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946100000_yndsw",
+      "ts": 1777946100000,
+      "data": "2026-05-04",
+      "hora": "22:55",
+      "linha": "2182",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": 9,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946100000_e5ei0",
+      "ts": 1777946100000,
+      "data": "2026-05-04",
+      "hora": "22:55",
+      "linha": "271 m",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777946220000_726fv",
+      "ts": 1777946220000,
+      "data": "2026-05-04",
+      "hora": "22:57",
+      "linha": "178a",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946220000_plr5h",
+      "ts": 1777946220000,
+      "data": "2026-05-04",
+      "hora": "22:57",
+      "linha": "2033",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": 12,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946220000_ub05y",
+      "ts": 1777946220000,
+      "data": "2026-05-04",
+      "hora": "22:57",
+      "linha": "1726",
+      "tabela": "15",
+      "carro": "",
+      "desvioMin": -8,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946280000_s2o3u",
+      "ts": 1777946280000,
+      "data": "2026-05-04",
+      "hora": "22:58",
+      "linha": "271c",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946280000_0cir3",
+      "ts": 1777946280000,
+      "data": "2026-05-04",
+      "hora": "22:58",
+      "linha": "172n",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946340000_e4gs0",
+      "ts": 1777946340000,
+      "data": "2026-05-04",
+      "hora": "22:59",
+      "linha": "1765",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": -6,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946400000_v1j3s",
+      "ts": 1777946400000,
+      "data": "2026-05-04",
+      "hora": "23:00",
+      "linha": "2161",
+      "tabela": "8",
+      "carro": "",
+      "desvioMin": -110,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946400000_aiq6o",
+      "ts": 1777946400000,
+      "data": "2026-05-04",
+      "hora": "23:00",
+      "linha": "2182",
+      "tabela": "11",
+      "carro": "",
+      "desvioMin": 4,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777946460000_8ao84",
+      "ts": 1777946460000,
+      "data": "2026-05-04",
+      "hora": "23:01",
+      "linha": "271 A",
+      "tabela": "5",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946460000_rlbnc",
+      "ts": 1777946460000,
+      "data": "2026-05-04",
+      "hora": "23:01",
+      "linha": "272 N",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946520000_b8y5o",
+      "ts": 1777946520000,
+      "data": "2026-05-04",
+      "hora": "23:02",
+      "linha": "2182",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777946580000_l5s8w",
+      "ts": 1777946580000,
+      "data": "2026-05-04",
+      "hora": "23:03",
+      "linha": "1726",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": -22,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946580000_bvax7",
+      "ts": 1777946580000,
+      "data": "2026-05-04",
+      "hora": "23:03",
+      "linha": "1726",
+      "tabela": "7",
+      "carro": "",
+      "desvioMin": -59,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946640000_rvmnn",
+      "ts": 1777946640000,
+      "data": "2026-05-04",
+      "hora": "23:04",
+      "linha": "178A",
+      "tabela": "7",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946700000_jdp39",
+      "ts": 1777946700000,
+      "data": "2026-05-04",
+      "hora": "23:05",
+      "linha": "701 A",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": 10,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946700000_rk1fh",
+      "ts": 1777946700000,
+      "data": "2026-05-04",
+      "hora": "23:05",
+      "linha": "2011",
+      "tabela": "6",
+      "carro": "",
+      "desvioMin": -20,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946760000_k41u2",
+      "ts": 1777946760000,
+      "data": "2026-05-04",
+      "hora": "23:06",
+      "linha": "271 A51",
+      "tabela": "8",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946820000_fx73z",
+      "ts": 1777946820000,
+      "data": "2026-05-04",
+      "hora": "23:07",
+      "linha": "271 P",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946880000_9n1ke",
+      "ts": 1777946880000,
+      "data": "2026-05-04",
+      "hora": "23:08",
+      "linha": "2010",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777946880000_dwukg",
+      "ts": 1777946880000,
+      "data": "2026-05-04",
+      "hora": "23:08",
+      "linha": "2182",
+      "tabela": "14",
+      "carro": "",
+      "desvioMin": -13,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946940000_dxdi7",
+      "ts": 1777946940000,
+      "data": "2026-05-04",
+      "hora": "23:09",
+      "linha": "2023",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": 14,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777946940000_1wfjy",
+      "ts": 1777946940000,
+      "data": "2026-05-04",
+      "hora": "23:09",
+      "linha": "2032",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947000000_3wtt7",
+      "ts": 1777947000000,
+      "data": "2026-05-04",
+      "hora": "23:10",
+      "linha": "2175",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777947000000_jl62k",
+      "ts": 1777947000000,
+      "data": "2026-05-04",
+      "hora": "23:10",
+      "linha": "1783",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": 32,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947060000_q7p0h",
+      "ts": 1777947060000,
+      "data": "2026-05-04",
+      "hora": "23:11",
+      "linha": "2011",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": 6,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947120000_j6tm4",
+      "ts": 1777947120000,
+      "data": "2026-05-04",
+      "hora": "23:12",
+      "linha": "2025",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947180000_9l1gg",
+      "ts": 1777947180000,
+      "data": "2026-05-04",
+      "hora": "23:13",
+      "linha": "2161",
+      "tabela": "3",
+      "carro": "",
+      "desvioMin": -2,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777947180000_f35jl",
+      "ts": 1777947180000,
+      "data": "2026-05-04",
+      "hora": "23:13",
+      "linha": "2011",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": -7,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947240000_p1c5l",
+      "ts": 1777947240000,
+      "data": "2026-05-04",
+      "hora": "23:14",
+      "linha": "2123",
+      "tabela": "",
+      "carro": "1377",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947300000_5bl94",
+      "ts": 1777947300000,
+      "data": "2026-05-04",
+      "hora": "23:15",
+      "linha": "2127",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947360000_dp45a",
+      "ts": 1777947360000,
+      "data": "2026-05-04",
+      "hora": "23:16",
+      "linha": "1778",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947360000_kpnn1",
+      "ts": 1777947360000,
+      "data": "2026-05-04",
+      "hora": "23:16",
+      "linha": "271 P",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947420000_nqdkz",
+      "ts": 1777947420000,
+      "data": "2026-05-04",
+      "hora": "23:17",
+      "linha": "1782",
+      "tabela": "6",
+      "carro": "",
+      "desvioMin": -23,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947420000_0k97q",
+      "ts": 1777947420000,
+      "data": "2026-05-04",
+      "hora": "23:17",
+      "linha": "2025",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947480000_maau3",
+      "ts": 1777947480000,
+      "data": "2026-05-04",
+      "hora": "23:18",
+      "linha": "213 E",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": -8,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947540000_qmy7a",
+      "ts": 1777947540000,
+      "data": "2026-05-04",
+      "hora": "23:19",
+      "linha": "1732",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947600000_vek6b",
+      "ts": 1777947600000,
+      "data": "2026-05-04",
+      "hora": "23:20",
+      "linha": "2023",
+      "tabela": "6",
+      "carro": "",
+      "desvioMin": 7,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947600000_k741w",
+      "ts": 1777947600000,
+      "data": "2026-05-04",
+      "hora": "23:20",
+      "linha": "271 A",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947660000_vzjb8",
+      "ts": 1777947660000,
+      "data": "2026-05-04",
+      "hora": "23:21",
+      "linha": "278 A",
+      "tabela": "6",
+      "carro": "",
+      "desvioMin": 1,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777947660000_5zeol",
+      "ts": 1777947660000,
+      "data": "2026-05-04",
+      "hora": "23:21",
+      "linha": "2182",
+      "tabela": "5",
+      "carro": "",
+      "desvioMin": -15,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947720000_omoid",
+      "ts": 1777947720000,
+      "data": "2026-05-04",
+      "hora": "23:22",
+      "linha": "2011",
+      "tabela": "5",
+      "carro": "",
+      "desvioMin": -13,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947720000_wnnsy",
+      "ts": 1777947720000,
+      "data": "2026-05-04",
+      "hora": "23:22",
+      "linha": "1783",
+      "tabela": "10",
+      "carro": "",
+      "desvioMin": 17,
+      "classe": "ATRASADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777947780000_2221h",
+      "ts": 1777947780000,
+      "data": "2026-05-04",
+      "hora": "23:23",
+      "linha": "1764",
+      "tabela": "4",
+      "carro": "",
+      "desvioMin": 3,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777947780000_dz0of",
+      "ts": 1777947780000,
+      "data": "2026-05-04",
+      "hora": "23:23",
+      "linha": "2127",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947840000_vvwi0",
+      "ts": 1777947840000,
+      "data": "2026-05-04",
+      "hora": "23:24",
+      "linha": "177 H",
+      "tabela": "1",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947900000_pfiw2",
+      "ts": 1777947900000,
+      "data": "2026-05-04",
+      "hora": "23:25",
+      "linha": "1767",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947900000_i94kk",
+      "ts": 1777947900000,
+      "data": "2026-05-04",
+      "hora": "23:25",
+      "linha": "1726",
+      "tabela": "",
+      "carro": "",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": true
+    },
+    {
+      "id": "m_1777947960000_ri97a",
+      "ts": 1777947960000,
+      "data": "2026-05-04",
+      "hora": "23:26",
+      "linha": "178 A",
+      "tabela": "5",
+      "carro": "",
+      "desvioMin": -4,
+      "classe": "PONTUAL",
+      "manual": true
+    },
+    {
+      "id": "m_1777947960000_sbkbe",
+      "ts": 1777947960000,
+      "data": "2026-05-04",
+      "hora": "23:26",
+      "linha": "278 A",
+      "tabela": "2",
+      "carro": "",
+      "desvioMin": -9,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1777948020000_pomkh",
+      "ts": 1777948020000,
+      "data": "2026-05-04",
+      "hora": "23:27",
+      "linha": "1726",
+      "tabela": "5",
+      "carro": "",
+      "desvioMin": -18,
+      "classe": "ADIANTADO",
+      "manual": true
+    },
+    {
+      "id": "m_1778031595715_xtsiw",
+      "ts": 1778031595715,
+      "data": "2026-05-05",
+      "hora": "22:39",
+      "linha": "2127",
+      "tabela": "1",
+      "carro": "1770",
+      "desvioMin": -56,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778031621985_rltwt",
+      "ts": 1778031621985,
+      "data": "2026-05-05",
+      "hora": "22:40",
+      "linha": "271 P",
+      "tabela": "6",
+      "carro": "2844",
+      "desvioMin": -30,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778031649178_op8q5",
+      "ts": 1778031649178,
+      "data": "2026-05-05",
+      "hora": "22:40",
+      "linha": "119C",
+      "tabela": "3",
+      "carro": "1309",
+      "desvioMin": 0,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778031695510_99u81",
+      "ts": 1778031695510,
+      "data": "2026-05-05",
+      "hora": "22:41",
+      "linha": "2023",
+      "tabela": "8",
+      "carro": "2533",
+      "desvioMin": 6,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778031736593_55ea2",
+      "ts": 1778031736593,
+      "data": "2026-05-05",
+      "hora": "22:42",
+      "linha": "119C",
+      "tabela": "2",
+      "carro": "1766",
+      "desvioMin": 27,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778031821097_nkc06",
+      "ts": 1778031821097,
+      "data": "2026-05-05",
+      "hora": "22:43",
+      "linha": "1156",
+      "tabela": "4",
+      "carro": "1714",
+      "desvioMin": -22,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778031851696_b76xy",
+      "ts": 1778031851696,
+      "data": "2026-05-05",
+      "hora": "22:44",
+      "linha": "2033",
+      "tabela": "1",
+      "carro": "2127",
+      "desvioMin": -54,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778031889872_7m3ss",
+      "ts": 1778031889872,
+      "data": "2026-05-05",
+      "hora": "22:44",
+      "linha": "2011",
+      "tabela": "",
+      "carro": "2834",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778031913578_u7oxq",
+      "ts": 1778031913578,
+      "data": "2026-05-05",
+      "hora": "22:45",
+      "linha": "1767",
+      "tabela": "3",
+      "carro": "2474",
+      "desvioMin": 0,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778031998392_2g8m3",
+      "ts": 1778031998392,
+      "data": "2026-05-05",
+      "hora": "22:46",
+      "linha": "351 F",
+      "tabela": "8",
+      "carro": "2841",
+      "desvioMin": -4,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778032092819_zlj5a",
+      "ts": 1778032092819,
+      "data": "2026-05-05",
+      "hora": "22:48",
+      "linha": "278 A",
+      "tabela": "4",
+      "carro": "2798",
+      "desvioMin": -12,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032135587_capvf",
+      "ts": 1778032135587,
+      "data": "2026-05-05",
+      "hora": "22:48",
+      "linha": "271 M",
+      "tabela": "2",
+      "carro": "2850",
+      "desvioMin": 3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778032305591_r3d43",
+      "ts": 1778032305591,
+      "data": "2026-05-05",
+      "hora": "22:51",
+      "linha": "2032",
+      "tabela": "3",
+      "carro": "2643",
+      "desvioMin": 13,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032332055_uriv0",
+      "ts": 1778032332055,
+      "data": "2026-05-05",
+      "hora": "22:52",
+      "linha": "2175",
+      "tabela": "",
+      "carro": "2522",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778032354569_t460w",
+      "ts": 1778032354569,
+      "data": "2026-05-05",
+      "hora": "22:52",
+      "linha": "271 P",
+      "tabela": "7",
+      "carro": "2397",
+      "desvioMin": -38,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032384052_rofjo",
+      "ts": 1778032384052,
+      "data": "2026-05-05",
+      "hora": "22:53",
+      "linha": "2025",
+      "tabela": "1",
+      "carro": "2644",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778032426457_3gfcg",
+      "ts": 1778032426457,
+      "data": "2026-05-05",
+      "hora": "22:53",
+      "linha": "2161",
+      "tabela": "6",
+      "carro": "1964",
+      "desvioMin": -80,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032477848_02r0n",
+      "ts": 1778032477848,
+      "data": "2026-05-05",
+      "hora": "22:54",
+      "linha": "1732",
+      "tabela": "5",
+      "carro": "1755",
+      "desvioMin": -11,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032515902_proj9",
+      "ts": 1778032515902,
+      "data": "2026-05-05",
+      "hora": "22:55",
+      "linha": "1773",
+      "tabela": "2",
+      "carro": "2831",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778032544958_3j3d7",
+      "ts": 1778032544958,
+      "data": "2026-05-05",
+      "hora": "22:55",
+      "linha": "1726",
+      "tabela": "15",
+      "carro": "2796",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032579669_e7q8x",
+      "ts": 1778032579669,
+      "data": "2026-05-05",
+      "hora": "22:56",
+      "linha": "271 C",
+      "tabela": "1",
+      "carro": "1027",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778032617774_phxka",
+      "ts": 1778032617774,
+      "data": "2026-05-05",
+      "hora": "22:56",
+      "linha": "2182",
+      "tabela": "11",
+      "carro": "1377",
+      "desvioMin": 0,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778032630278_snymq",
+      "ts": 1778032630278,
+      "data": "2026-05-05",
+      "hora": "22:57",
+      "linha": "701 A",
+      "tabela": "14",
+      "carro": "1011",
+      "desvioMin": 42,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032654687_ggojg",
+      "ts": 1778032654687,
+      "data": "2026-05-05",
+      "hora": "22:57",
+      "linha": "271A",
+      "tabela": "12",
+      "carro": "1365",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778032691855_uynb5",
+      "ts": 1778032691855,
+      "data": "2026-05-05",
+      "hora": "22:58",
+      "linha": "2033",
+      "tabela": "4",
+      "carro": "2141",
+      "desvioMin": 13,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032731438_qg7pj",
+      "ts": 1778032731438,
+      "data": "2026-05-05",
+      "hora": "22:58",
+      "linha": "271 M",
+      "tabela": "1",
+      "carro": "2849",
+      "desvioMin": 28,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032810599_gxcbe",
+      "ts": 1778032810599,
+      "data": "2026-05-05",
+      "hora": "23:00",
+      "linha": "1782",
+      "tabela": "3",
+      "carro": "2810",
+      "desvioMin": -1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778032855172_2obou",
+      "ts": 1778032855172,
+      "data": "2026-05-05",
+      "hora": "23:00",
+      "linha": "2182",
+      "tabela": "3",
+      "carro": "1757",
+      "desvioMin": 14,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032874025_tad0k",
+      "ts": 1778032874025,
+      "data": "2026-05-05",
+      "hora": "23:01",
+      "linha": "271 C",
+      "tabela": "2",
+      "carro": "1440",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778032895262_va3a7",
+      "ts": 1778032895262,
+      "data": "2026-05-05",
+      "hora": "23:01",
+      "linha": "1726",
+      "tabela": "7",
+      "carro": "2777",
+      "desvioMin": -61,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778032913116_mn9er",
+      "ts": 1778032913116,
+      "data": "2026-05-05",
+      "hora": "23:01",
+      "linha": "2182",
+      "tabela": "4",
+      "carro": "1708",
+      "desvioMin": -6,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033014344_a6y89",
+      "ts": 1778033014344,
+      "data": "2026-05-05",
+      "hora": "23:03",
+      "linha": "271 M",
+      "tabela": "3",
+      "carro": "32851",
+      "desvioMin": 3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778033037980_v8b9h",
+      "ts": 1778033037980,
+      "data": "2026-05-05",
+      "hora": "23:03",
+      "linha": "1726",
+      "tabela": "3",
+      "carro": "2299",
+      "desvioMin": -22,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033061751_j0plq",
+      "ts": 1778033061751,
+      "data": "2026-05-05",
+      "hora": "23:04",
+      "linha": "2123",
+      "tabela": "4",
+      "carro": "1950",
+      "desvioMin": -32,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033079273_vb2wt",
+      "ts": 1778033079273,
+      "data": "2026-05-05",
+      "hora": "23:04",
+      "linha": "178 A",
+      "tabela": "4",
+      "carro": "1032",
+      "desvioMin": -1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778033128548_gkqdh",
+      "ts": 1778033128548,
+      "data": "2026-05-05",
+      "hora": "23:05",
+      "linha": "2011",
+      "tabela": "6",
+      "carro": "2469",
+      "desvioMin": -20,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033182614_wbwe2",
+      "ts": 1778033182614,
+      "data": "2026-05-05",
+      "hora": "23:06",
+      "linha": "271A",
+      "tabela": "5",
+      "carro": "1438",
+      "desvioMin": 16,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033207033_5644w",
+      "ts": 1778033207033,
+      "data": "2026-05-05",
+      "hora": "23:06",
+      "linha": "271 M",
+      "tabela": "",
+      "carro": "2531",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778033233830_73b57",
+      "ts": 1778033233830,
+      "data": "2026-05-05",
+      "hora": "23:07",
+      "linha": "1726",
+      "tabela": "2",
+      "carro": "2785",
+      "desvioMin": -8,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033266231_mz2a9",
+      "ts": 1778033266231,
+      "data": "2026-05-05",
+      "hora": "23:07",
+      "linha": "1765",
+      "tabela": "2",
+      "carro": "2524",
+      "desvioMin": 2,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778033292816_lgrs3",
+      "ts": 1778033292816,
+      "data": "2026-05-05",
+      "hora": "23:08",
+      "linha": "1783",
+      "tabela": "1",
+      "carro": "2701",
+      "desvioMin": 30,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033324770_mk2nu",
+      "ts": 1778033324770,
+      "data": "2026-05-05",
+      "hora": "23:08",
+      "linha": "272 N",
+      "tabela": "2",
+      "carro": "1328",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778033351376_s30kd",
+      "ts": 1778033351376,
+      "data": "2026-05-05",
+      "hora": "23:09",
+      "linha": "2032",
+      "tabela": "2",
+      "carro": "2342",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033393257_wz372",
+      "ts": 1778033393257,
+      "data": "2026-05-05",
+      "hora": "23:09",
+      "linha": "174 M",
+      "tabela": "",
+      "carro": "2648",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778033414534_8i8yn",
+      "ts": 1778033414534,
+      "data": "2026-05-05",
+      "hora": "23:10",
+      "linha": "2023",
+      "tabela": "3",
+      "carro": "2750",
+      "desvioMin": 15,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033440491_noe8a",
+      "ts": 1778033440491,
+      "data": "2026-05-05",
+      "hora": "23:10",
+      "linha": "2010",
+      "tabela": "1",
+      "carro": "2780",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778033479965_6pr74",
+      "ts": 1778033479965,
+      "data": "2026-05-05",
+      "hora": "23:11",
+      "linha": "178 A",
+      "tabela": "7",
+      "carro": "1436",
+      "desvioMin": -69,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033506294_lg654",
+      "ts": 1778033506294,
+      "data": "2026-05-05",
+      "hora": "23:11",
+      "linha": "2161",
+      "tabela": "3",
+      "carro": "1400",
+      "desvioMin": -4,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778033531351_9uhiz",
+      "ts": 1778033531351,
+      "data": "2026-05-05",
+      "hora": "23:12",
+      "linha": "172N",
+      "tabela": "",
+      "carro": "1750",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778033580207_a1lxv",
+      "ts": 1778033580207,
+      "data": "2026-05-05",
+      "hora": "23:13",
+      "linha": "2123",
+      "tabela": "",
+      "carro": "1031",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778033604396_1pxdq",
+      "ts": 1778033604396,
+      "data": "2026-05-05",
+      "hora": "23:13",
+      "linha": "2011",
+      "tabela": "3",
+      "carro": "2718",
+      "desvioMin": 8,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033629410_y6yxb",
+      "ts": 1778033629410,
+      "data": "2026-05-05",
+      "hora": "23:13",
+      "linha": "2025",
+      "tabela": "2",
+      "carro": "2827",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778033664880_9b5up",
+      "ts": 1778033664880,
+      "data": "2026-05-05",
+      "hora": "23:14",
+      "linha": "2182",
+      "tabela": "14",
+      "carro": "1710",
+      "desvioMin": -7,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033697701_iqqa3",
+      "ts": 1778033697701,
+      "data": "2026-05-05",
+      "hora": "23:14",
+      "linha": "1767",
+      "tabela": "",
+      "carro": "2811",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778033734769_j01vu",
+      "ts": 1778033734769,
+      "data": "2026-05-05",
+      "hora": "23:15",
+      "linha": "1783",
+      "tabela": "10",
+      "carro": "2723",
+      "desvioMin": 10,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033756316_2g80j",
+      "ts": 1778033756316,
+      "data": "2026-05-05",
+      "hora": "23:15",
+      "linha": "1156",
+      "tabela": "3",
+      "carro": "1762",
+      "desvioMin": 30,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033778137_c8l8k",
+      "ts": 1778033778137,
+      "data": "2026-05-05",
+      "hora": "23:16",
+      "linha": "2182",
+      "tabela": "4",
+      "carro": "1717",
+      "desvioMin": 9,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033814127_yjfg7",
+      "ts": 1778033814127,
+      "data": "2026-05-05",
+      "hora": "23:16",
+      "linha": "2175",
+      "tabela": "4",
+      "carro": "2280",
+      "desvioMin": 1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778033885143_u3b91",
+      "ts": 1778033885143,
+      "data": "2026-05-05",
+      "hora": "23:18",
+      "linha": "2011",
+      "tabela": "4",
+      "carro": "2394",
+      "desvioMin": -2,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778033926463_7l5u5",
+      "ts": 1778033926463,
+      "data": "2026-05-05",
+      "hora": "23:18",
+      "linha": "172N",
+      "tabela": "6",
+      "carro": "1041",
+      "desvioMin": -84,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033965327_i2l75",
+      "ts": 1778033965327,
+      "data": "2026-05-05",
+      "hora": "23:19",
+      "linha": "2023",
+      "tabela": "6",
+      "carro": "2792",
+      "desvioMin": 6,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778033994984_l47ty",
+      "ts": 1778033994984,
+      "data": "2026-05-05",
+      "hora": "23:19",
+      "linha": "213 E",
+      "tabela": "4",
+      "carro": "2639",
+      "desvioMin": -7,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034024155_el8j2",
+      "ts": 1778034024155,
+      "data": "2026-05-05",
+      "hora": "23:20",
+      "linha": "1773",
+      "tabela": "4",
+      "carro": "2820",
+      "desvioMin": -17,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034055976_c2523",
+      "ts": 1778034055976,
+      "data": "2026-05-05",
+      "hora": "23:20",
+      "linha": "1764",
+      "tabela": "4",
+      "carro": "2294",
+      "desvioMin": 0,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034100207_4nmpk",
+      "ts": 1778034100207,
+      "data": "2026-05-05",
+      "hora": "23:21",
+      "linha": "1732",
+      "tabela": "7",
+      "carro": "1736",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034158116_fu6d4",
+      "ts": 1778034158116,
+      "data": "2026-05-05",
+      "hora": "23:22",
+      "linha": "1778",
+      "tabela": "",
+      "carro": "2538",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778034186123_qtako",
+      "ts": 1778034186123,
+      "data": "2026-05-05",
+      "hora": "23:23",
+      "linha": "1767",
+      "tabela": "5",
+      "carro": "2493",
+      "desvioMin": -2,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034209532_osgon",
+      "ts": 1778034209532,
+      "data": "2026-05-05",
+      "hora": "23:23",
+      "linha": "2025",
+      "tabela": "2",
+      "carro": "2786",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778034234079_0ngcw",
+      "ts": 1778034234079,
+      "data": "2026-05-05",
+      "hora": "23:23",
+      "linha": "178T",
+      "tabela": "",
+      "carro": "1445",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778034273456_01t73",
+      "ts": 1778034273456,
+      "data": "2026-05-05",
+      "hora": "23:24",
+      "linha": "271 M",
+      "tabela": "6",
+      "carro": "2745",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034317887_u82nw",
+      "ts": 1778034317887,
+      "data": "2026-05-05",
+      "hora": "23:25",
+      "linha": "2011",
+      "tabela": "5",
+      "carro": "2284",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034352133_nchdg",
+      "ts": 1778034352133,
+      "data": "2026-05-05",
+      "hora": "23:25",
+      "linha": "271A",
+      "tabela": "2",
+      "carro": "1016",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034374779_5xodu",
+      "ts": 1778034374779,
+      "data": "2026-05-05",
+      "hora": "23:26",
+      "linha": "701 A",
+      "tabela": "2",
+      "carro": "1398",
+      "desvioMin": 31,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034390799_ec8nd",
+      "ts": 1778034390799,
+      "data": "2026-05-05",
+      "hora": "23:26",
+      "linha": "701 A",
+      "tabela": "12",
+      "carro": "1947",
+      "desvioMin": -119,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034434064_ia9ki",
+      "ts": 1778034434064,
+      "data": "2026-05-05",
+      "hora": "23:27",
+      "linha": "351 F",
+      "tabela": "1",
+      "carro": "2845",
+      "desvioMin": 12,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034457389_zaas7",
+      "ts": 1778034457389,
+      "data": "2026-05-05",
+      "hora": "23:27",
+      "linha": "351 F",
+      "tabela": "3",
+      "carro": "2836",
+      "desvioMin": -13,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034479885_jjl4t",
+      "ts": 1778034479885,
+      "data": "2026-05-05",
+      "hora": "23:27",
+      "linha": "1726",
+      "tabela": "5",
+      "carro": "2140",
+      "desvioMin": -18,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034499877_1pxht",
+      "ts": 1778034499877,
+      "data": "2026-05-05",
+      "hora": "23:28",
+      "linha": "271 P",
+      "tabela": "9",
+      "carro": "2776",
+      "desvioMin": -2,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034526393_vawwr",
+      "ts": 1778034526393,
+      "data": "2026-05-05",
+      "hora": "23:28",
+      "linha": "278 A",
+      "tabela": "2",
+      "carro": "2291",
+      "desvioMin": -7,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034556712_gsf4m",
+      "ts": 1778034556712,
+      "data": "2026-05-05",
+      "hora": "23:29",
+      "linha": "2182",
+      "tabela": "5",
+      "carro": "1709",
+      "desvioMin": -7,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034626496_z1vkg",
+      "ts": 1778034626496,
+      "data": "2026-05-05",
+      "hora": "23:30",
+      "linha": "174 M",
+      "tabela": "8",
+      "carro": "2837",
+      "desvioMin": 30,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034655640_ca5ix",
+      "ts": 1778034655640,
+      "data": "2026-05-05",
+      "hora": "23:30",
+      "linha": "278 A",
+      "tabela": "6",
+      "carro": "2547",
+      "desvioMin": 10,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034689894_5izsw",
+      "ts": 1778034689894,
+      "data": "2026-05-05",
+      "hora": "23:31",
+      "linha": "177H",
+      "tabela": "1",
+      "carro": "1963",
+      "desvioMin": -12,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034741524_rjzz7",
+      "ts": 1778034741524,
+      "data": "2026-05-05",
+      "hora": "23:32",
+      "linha": "1783",
+      "tabela": "3",
+      "carro": "2712",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034768185_jotsb",
+      "ts": 1778034768185,
+      "data": "2026-05-05",
+      "hora": "23:32",
+      "linha": "271A",
+      "tabela": "4",
+      "carro": "1437",
+      "desvioMin": -13,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034795728_nzap4",
+      "ts": 1778034795728,
+      "data": "2026-05-05",
+      "hora": "23:33",
+      "linha": "1726",
+      "tabela": "4",
+      "carro": "2545",
+      "desvioMin": -2,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034823367_r3yki",
+      "ts": 1778034823367,
+      "data": "2026-05-05",
+      "hora": "23:33",
+      "linha": "2025",
+      "tabela": "4",
+      "carro": "2828",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778034851180_zxu7g",
+      "ts": 1778034851180,
+      "data": "2026-05-05",
+      "hora": "23:34",
+      "linha": "1765",
+      "tabela": "3",
+      "carro": "2462",
+      "desvioMin": 4,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778034878384_nx991",
+      "ts": 1778034878384,
+      "data": "2026-05-05",
+      "hora": "23:34",
+      "linha": "1773",
+      "tabela": "1",
+      "carro": "2711",
+      "desvioMin": -6,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034900048_oodnc",
+      "ts": 1778034900048,
+      "data": "2026-05-05",
+      "hora": "23:35",
+      "linha": "1156",
+      "tabela": "6",
+      "carro": "1039",
+      "desvioMin": 10,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778034928138_tp4rj",
+      "ts": 1778034928138,
+      "data": "2026-05-05",
+      "hora": "23:35",
+      "linha": "701 A",
+      "tabela": "",
+      "carro": "1385",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778034955164_sgvzq",
+      "ts": 1778034955164,
+      "data": "2026-05-05",
+      "hora": "23:35",
+      "linha": "178 A",
+      "tabela": "5",
+      "carro": "1355",
+      "desvioMin": 5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035004244_qajt9",
+      "ts": 1778035004244,
+      "data": "2026-05-05",
+      "hora": "23:36",
+      "linha": "2026",
+      "tabela": "3",
+      "carro": "2396",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778035046596_rhei2",
+      "ts": 1778035046596,
+      "data": "2026-05-05",
+      "hora": "23:37",
+      "linha": "271 F",
+      "tabela": "4",
+      "carro": "1730",
+      "desvioMin": 7,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035087085_p3aow",
+      "ts": 1778035087085,
+      "data": "2026-05-05",
+      "hora": "23:38",
+      "linha": "2010",
+      "tabela": "2",
+      "carro": "2781",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778035133385_lri04",
+      "ts": 1778035133385,
+      "data": "2026-05-05",
+      "hora": "23:38",
+      "linha": "1721",
+      "tabela": "6",
+      "carro": "2806",
+      "desvioMin": 1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035168973_1tfok",
+      "ts": 1778035168973,
+      "data": "2026-05-05",
+      "hora": "23:39",
+      "linha": "271 M",
+      "tabela": "7",
+      "carro": "2287",
+      "desvioMin": -2,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035196209_x7afh",
+      "ts": 1778035196209,
+      "data": "2026-05-05",
+      "hora": "23:39",
+      "linha": "1732",
+      "tabela": "9",
+      "carro": "1752",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035223121_e2zys",
+      "ts": 1778035223121,
+      "data": "2026-05-05",
+      "hora": "23:40",
+      "linha": "178 A",
+      "tabela": "1",
+      "carro": "1361",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035249339_3ytr6",
+      "ts": 1778035249339,
+      "data": "2026-05-05",
+      "hora": "23:40",
+      "linha": "172N",
+      "tabela": "1",
+      "carro": "1739",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035282212_pjrt9",
+      "ts": 1778035282212,
+      "data": "2026-05-05",
+      "hora": "23:41",
+      "linha": "172N",
+      "tabela": "10",
+      "carro": "1733",
+      "desvioMin": 6,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035303183_bi9ri",
+      "ts": 1778035303183,
+      "data": "2026-05-05",
+      "hora": "23:41",
+      "linha": "2011",
+      "tabela": "7",
+      "carro": "2802",
+      "desvioMin": -14,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035336980_vz0bq",
+      "ts": 1778035336980,
+      "data": "2026-05-05",
+      "hora": "23:42",
+      "linha": "1721",
+      "tabela": "8",
+      "carro": "2282",
+      "desvioMin": -9,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035355212_4vh1m",
+      "ts": 1778035355212,
+      "data": "2026-05-05",
+      "hora": "23:42",
+      "linha": "1783",
+      "tabela": "4",
+      "carro": "2715",
+      "desvioMin": 22,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035383745_61lh4",
+      "ts": 1778035383745,
+      "data": "2026-05-05",
+      "hora": "23:43",
+      "linha": "278 A",
+      "tabela": "",
+      "carro": "2842",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778035420563_a07ko",
+      "ts": 1778035420563,
+      "data": "2026-05-05",
+      "hora": "23:43",
+      "linha": "1764",
+      "tabela": "6",
+      "carro": "2737",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035481289_67nq4",
+      "ts": 1778035481289,
+      "data": "2026-05-05",
+      "hora": "23:44",
+      "linha": "2127",
+      "tabela": "6",
+      "carro": "1909",
+      "desvioMin": -66,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035506020_el3hu",
+      "ts": 1778035506020,
+      "data": "2026-05-05",
+      "hora": "23:45",
+      "linha": "2123",
+      "tabela": "5",
+      "carro": "1333",
+      "desvioMin": -9,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035548505_a0vfu",
+      "ts": 1778035548505,
+      "data": "2026-05-05",
+      "hora": "23:45",
+      "linha": "278 A",
+      "tabela": "3",
+      "carro": "2697",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035577543_b19er",
+      "ts": 1778035577543,
+      "data": "2026-05-05",
+      "hora": "23:46",
+      "linha": "701 A",
+      "tabela": "3",
+      "carro": "1017",
+      "desvioMin": -119,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035627103_oy50h",
+      "ts": 1778035627103,
+      "data": "2026-05-05",
+      "hora": "23:47",
+      "linha": "2025",
+      "tabela": "",
+      "carro": "2292",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778035670892_qkwgn",
+      "ts": 1778035670892,
+      "data": "2026-05-05",
+      "hora": "23:47",
+      "linha": "271A 51",
+      "tabela": "8",
+      "carro": "1441",
+      "desvioMin": 37,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035717559_xzduh",
+      "ts": 1778035717559,
+      "data": "2026-05-05",
+      "hora": "23:48",
+      "linha": "2033",
+      "tabela": "",
+      "carro": "2345",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778035754383_1whps",
+      "ts": 1778035754383,
+      "data": "2026-05-05",
+      "hora": "23:49",
+      "linha": "1764",
+      "tabela": "",
+      "carro": "2739",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778035778543_z97o2",
+      "ts": 1778035778543,
+      "data": "2026-05-05",
+      "hora": "23:49",
+      "linha": "271 P",
+      "tabela": "1",
+      "carro": "2388",
+      "desvioMin": -1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035797741_35cu9",
+      "ts": 1778035797741,
+      "data": "2026-05-05",
+      "hora": "23:49",
+      "linha": "1783",
+      "tabela": "5",
+      "carro": "2717",
+      "desvioMin": -1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035819881_j2o2e",
+      "ts": 1778035819881,
+      "data": "2026-05-05",
+      "hora": "23:50",
+      "linha": "177H",
+      "tabela": "2",
+      "carro": "1967",
+      "desvioMin": -11,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035859813_ho8bs",
+      "ts": 1778035859813,
+      "data": "2026-05-05",
+      "hora": "23:50",
+      "linha": "351 F",
+      "tabela": "5",
+      "carro": "2840",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035882306_25t6p",
+      "ts": 1778035882306,
+      "data": "2026-05-05",
+      "hora": "23:51",
+      "linha": "2033",
+      "tabela": "2",
+      "carro": "2124",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035897181_jged6",
+      "ts": 1778035897181,
+      "data": "2026-05-05",
+      "hora": "23:51",
+      "linha": "1732",
+      "tabela": "1",
+      "carro": "1722",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035923399_m8pjl",
+      "ts": 1778035923399,
+      "data": "2026-05-05",
+      "hora": "23:52",
+      "linha": "2032",
+      "tabela": "4",
+      "carro": "2611",
+      "desvioMin": 2,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778035947100_9mi5t",
+      "ts": 1778035947100,
+      "data": "2026-05-05",
+      "hora": "23:52",
+      "linha": "351 F",
+      "tabela": "6",
+      "carro": "2788",
+      "desvioMin": -103,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778035985925_l88mt",
+      "ts": 1778035985925,
+      "data": "2026-05-05",
+      "hora": "23:53",
+      "linha": "119",
+      "tabela": "4",
+      "carro": "1305",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778036011669_j4d9i",
+      "ts": 1778036011669,
+      "data": "2026-05-05",
+      "hora": "23:53",
+      "linha": "213 E",
+      "tabela": "2",
+      "carro": "2637",
+      "desvioMin": -6,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036046056_k6pg7",
+      "ts": 1778036046056,
+      "data": "2026-05-05",
+      "hora": "23:54",
+      "linha": "271A 51",
+      "tabela": "2",
+      "carro": "1379",
+      "desvioMin": -1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778036081462_rzp1v",
+      "ts": 1778036081462,
+      "data": "2026-05-05",
+      "hora": "23:54",
+      "linha": "2127",
+      "tabela": "2",
+      "carro": "1439",
+      "desvioMin": -1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778036103111_h1lor",
+      "ts": 1778036103111,
+      "data": "2026-05-05",
+      "hora": "23:55",
+      "linha": "2182",
+      "tabela": "10",
+      "carro": "1748",
+      "desvioMin": -10,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036127758_0d9zr",
+      "ts": 1778036127758,
+      "data": "2026-05-05",
+      "hora": "23:55",
+      "linha": "1765",
+      "tabela": "4",
+      "carro": "2463",
+      "desvioMin": -4,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778036152861_or8qb",
+      "ts": 1778036152861,
+      "data": "2026-05-05",
+      "hora": "23:55",
+      "linha": "172N",
+      "tabela": "3",
+      "carro": "1749",
+      "desvioMin": -9,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036163826_77z13",
+      "ts": 1778036163826,
+      "data": "2026-05-05",
+      "hora": "23:56",
+      "linha": "119C",
+      "tabela": "4",
+      "carro": "1377",
+      "desvioMin": 33,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036214649_8h1wg",
+      "ts": 1778036214649,
+      "data": "2026-05-05",
+      "hora": "23:56",
+      "linha": "271A",
+      "tabela": "8",
+      "carro": "1431",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778036306212_0bhum",
+      "ts": 1778036306212,
+      "data": "2026-05-05",
+      "hora": "23:58",
+      "linha": "174 M",
+      "tabela": "7",
+      "carro": "2710",
+      "desvioMin": -87,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036329219_jg5tw",
+      "ts": 1778036329219,
+      "data": "2026-05-05",
+      "hora": "23:58",
+      "linha": "2025",
+      "tabela": "7",
+      "carro": "2791",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778036342795_jmmha",
+      "ts": 1778036342795,
+      "data": "2026-05-05",
+      "hora": "23:59",
+      "linha": "2161",
+      "tabela": "4",
+      "carro": "1363",
+      "desvioMin": 24,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036358912_v6l96",
+      "ts": 1778036358912,
+      "data": "2026-05-05",
+      "hora": "23:59",
+      "linha": "2011",
+      "tabela": "8",
+      "carro": "2286",
+      "desvioMin": -16,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036377360_vmicp",
+      "ts": 1778036377360,
+      "data": "2026-05-05",
+      "hora": "23:59",
+      "linha": "278 A",
+      "tabela": "1",
+      "carro": "2650",
+      "desvioMin": -16,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036425671_vraaj",
+      "ts": 1778036425671,
+      "data": "2026-05-06",
+      "hora": "00:00",
+      "linha": "272 N",
+      "tabela": "",
+      "carro": "1360",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778036466391_ia4qb",
+      "ts": 1778036466391,
+      "data": "2026-05-06",
+      "hora": "00:01",
+      "linha": "351 F",
+      "tabela": "9",
+      "carro": "2499",
+      "desvioMin": -34,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036493897_shx0e",
+      "ts": 1778036493897,
+      "data": "2026-05-06",
+      "hora": "00:01",
+      "linha": "2010",
+      "tabela": "7",
+      "carro": "2706",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778036533334_4nx1r",
+      "ts": 1778036533334,
+      "data": "2026-05-06",
+      "hora": "00:02",
+      "linha": "271 C",
+      "tabela": "3",
+      "carro": "1352",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778036582203_hf2op",
+      "ts": 1778036582203,
+      "data": "2026-05-06",
+      "hora": "00:03",
+      "linha": "271 P",
+      "tabela": "",
+      "carro": "2495",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778036606941_99syj",
+      "ts": 1778036606941,
+      "data": "2026-05-06",
+      "hora": "00:03",
+      "linha": "178T",
+      "tabela": "3",
+      "carro": "1035",
+      "desvioMin": 28,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036648554_ukeyo",
+      "ts": 1778036648554,
+      "data": "2026-05-06",
+      "hora": "00:04",
+      "linha": "1783",
+      "tabela": "6",
+      "carro": "2530",
+      "desvioMin": -1,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778036679075_hqfjs",
+      "ts": 1778036679075,
+      "data": "2026-05-06",
+      "hora": "00:04",
+      "linha": "1764",
+      "tabela": "",
+      "carro": "2740",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778036705621_3bexv",
+      "ts": 1778036705621,
+      "data": "2026-05-06",
+      "hora": "00:05",
+      "linha": "271A",
+      "tabela": "9",
+      "carro": "1038",
+      "desvioMin": -9,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036731641_8jl4j",
+      "ts": 1778036731641,
+      "data": "2026-05-06",
+      "hora": "00:05",
+      "linha": "2175",
+      "tabela": "6",
+      "carro": "2526",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778036772764_976xz",
+      "ts": 1778036772764,
+      "data": "2026-05-06",
+      "hora": "00:06",
+      "linha": "2127",
+      "tabela": "4",
+      "carro": "1334",
+      "desvioMin": -9,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036794805_jtpmm",
+      "ts": 1778036794805,
+      "data": "2026-05-06",
+      "hora": "00:06",
+      "linha": "1732",
+      "tabela": "2",
+      "carro": "1711",
+      "desvioMin": -13,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036825883_lugp9",
+      "ts": 1778036825883,
+      "data": "2026-05-06",
+      "hora": "00:07",
+      "linha": "271 M",
+      "tabela": "9",
+      "carro": "2794",
+      "desvioMin": -8,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036858083_9079k",
+      "ts": 1778036858083,
+      "data": "2026-05-06",
+      "hora": "00:07",
+      "linha": "2032",
+      "tabela": "",
+      "carro": "2647",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778036889292_6jqpd",
+      "ts": 1778036889292,
+      "data": "2026-05-06",
+      "hora": "00:08",
+      "linha": "351 F",
+      "tabela": "7",
+      "carro": "2854",
+      "desvioMin": -7,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778036935740_e4dj1",
+      "ts": 1778036935740,
+      "data": "2026-05-06",
+      "hora": "00:08",
+      "linha": "271 F",
+      "tabela": "1",
+      "carro": "1742",
+      "desvioMin": 0,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778036967318_z2l3e",
+      "ts": 1778036967318,
+      "data": "2026-05-06",
+      "hora": "00:09",
+      "linha": "2123",
+      "tabela": "",
+      "carro": "1026",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778037004143_xhilt",
+      "ts": 1778037004143,
+      "data": "2026-05-06",
+      "hora": "00:10",
+      "linha": "1721",
+      "tabela": "9",
+      "carro": "2277",
+      "desvioMin": 0,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037033563_d45yn",
+      "ts": 1778037033563,
+      "data": "2026-05-06",
+      "hora": "00:10",
+      "linha": "1156",
+      "tabela": "1",
+      "carro": "1760",
+      "desvioMin": 12,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037078909_lbclz",
+      "ts": 1778037078909,
+      "data": "2026-05-06",
+      "hora": "00:11",
+      "linha": "2011",
+      "tabela": "",
+      "carro": "2618",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778037099242_5sk11",
+      "ts": 1778037099242,
+      "data": "2026-05-06",
+      "hora": "00:11",
+      "linha": "172N",
+      "tabela": "7",
+      "carro": "1368",
+      "desvioMin": -54,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037136686_w7ve4",
+      "ts": 1778037136686,
+      "data": "2026-05-06",
+      "hora": "00:12",
+      "linha": "174 M",
+      "tabela": "4",
+      "carro": "2838",
+      "desvioMin": -18,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037160072_f636p",
+      "ts": 1778037160072,
+      "data": "2026-05-06",
+      "hora": "00:12",
+      "linha": "177H",
+      "tabela": "8",
+      "carro": "1971",
+      "desvioMin": 9,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037210458_pdbe0",
+      "ts": 1778037210458,
+      "data": "2026-05-06",
+      "hora": "00:13",
+      "linha": "271 P",
+      "tabela": "5",
+      "carro": "2778",
+      "desvioMin": 8,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037232483_w6h1c",
+      "ts": 1778037232483,
+      "data": "2026-05-06",
+      "hora": "00:13",
+      "linha": "1778",
+      "tabela": "",
+      "carro": "2621",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778037270590_yf379",
+      "ts": 1778037270590,
+      "data": "2026-05-06",
+      "hora": "00:14",
+      "linha": "272 N",
+      "tabela": "1",
+      "carro": "1332",
+      "desvioMin": -22,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037311827_qb28e",
+      "ts": 1778037311827,
+      "data": "2026-05-06",
+      "hora": "00:15",
+      "linha": "271A 51",
+      "tabela": "3",
+      "carro": "1380",
+      "desvioMin": 5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037378939_zecu0",
+      "ts": 1778037378939,
+      "data": "2026-05-06",
+      "hora": "00:16",
+      "linha": "178T",
+      "tabela": "5",
+      "carro": "1021",
+      "desvioMin": 26,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037439830_yjh9a",
+      "ts": 1778037439830,
+      "data": "2026-05-06",
+      "hora": "00:17",
+      "linha": "178T",
+      "tabela": "11",
+      "carro": "1327",
+      "desvioMin": 3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037470679_htleq",
+      "ts": 1778037470679,
+      "data": "2026-05-06",
+      "hora": "00:17",
+      "linha": "2161",
+      "tabela": "7",
+      "carro": "1371",
+      "desvioMin": -13,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037519311_aesyi",
+      "ts": 1778037519311,
+      "data": "2026-05-06",
+      "hora": "00:18",
+      "linha": "1783",
+      "tabela": "2",
+      "carro": "2708",
+      "desvioMin": -37,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037543487_ry0ki",
+      "ts": 1778037543487,
+      "data": "2026-05-06",
+      "hora": "00:19",
+      "linha": "2012",
+      "tabela": "1",
+      "carro": "2649",
+      "desvioMin": 4,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037585197_xbagj",
+      "ts": 1778037585197,
+      "data": "2026-05-06",
+      "hora": "00:19",
+      "linha": "701 A",
+      "tabela": "8",
+      "carro": "1389",
+      "desvioMin": 4,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037623177_dusn2",
+      "ts": 1778037623177,
+      "data": "2026-05-06",
+      "hora": "00:20",
+      "linha": "177H",
+      "tabela": "3",
+      "carro": "1432",
+      "desvioMin": -4,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037661808_pdgvr",
+      "ts": 1778037661808,
+      "data": "2026-05-06",
+      "hora": "00:21",
+      "linha": "271A",
+      "tabela": "",
+      "carro": "1042",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778037699052_65fmx",
+      "ts": 1778037699052,
+      "data": "2026-05-06",
+      "hora": "00:21",
+      "linha": "2023",
+      "tabela": "2",
+      "carro": "2730",
+      "desvioMin": 17,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037729477_ts1wo",
+      "ts": 1778037729477,
+      "data": "2026-05-06",
+      "hora": "00:22",
+      "linha": "2182",
+      "tabela": "9",
+      "carro": "1720",
+      "desvioMin": -3,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037755402_ahuug",
+      "ts": 1778037755402,
+      "data": "2026-05-06",
+      "hora": "00:22",
+      "linha": "2010",
+      "tabela": "4",
+      "carro": "2542",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    },
+    {
+      "id": "m_1778037779505_irmnk",
+      "ts": 1778037779505,
+      "data": "2026-05-06",
+      "hora": "00:22",
+      "linha": "2011",
+      "tabela": "10",
+      "carro": "2807",
+      "desvioMin": 17,
+      "classe": "ATRASADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037809415_o0yj8",
+      "ts": 1778037809415,
+      "data": "2026-05-06",
+      "hora": "00:23",
+      "linha": "172N",
+      "tabela": "5",
+      "carro": "1725",
+      "desvioMin": -5,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037828937_95ymq",
+      "ts": 1778037828937,
+      "data": "2026-05-06",
+      "hora": "00:23",
+      "linha": "2011",
+      "tabela": "12",
+      "carro": "2805",
+      "desvioMin": -7,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037855332_c9ceh",
+      "ts": 1778037855332,
+      "data": "2026-05-06",
+      "hora": "00:24",
+      "linha": "278 A",
+      "tabela": "7",
+      "carro": "2279",
+      "desvioMin": -11,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037884752_zd37w",
+      "ts": 1778037884752,
+      "data": "2026-05-06",
+      "hora": "00:24",
+      "linha": "1156",
+      "tabela": "8",
+      "carro": "1965",
+      "desvioMin": 4,
+      "classe": "PONTUAL",
+      "manual": false
+    },
+    {
+      "id": "m_1778037931488_48ppx",
+      "ts": 1778037931488,
+      "data": "2026-05-06",
+      "hora": "00:25",
+      "linha": "1732",
+      "tabela": "3",
+      "carro": "1713",
+      "desvioMin": -12,
+      "classe": "ADIANTADO",
+      "manual": false
+    },
+    {
+      "id": "m_1778037949968_o21xf",
+      "ts": 1778037949968,
+      "data": "2026-05-06",
+      "hora": "00:25",
+      "linha": "271 F",
+      "tabela": "",
+      "carro": "1740",
+      "desvioMin": null,
+      "classe": "PENDENTE",
+      "manual": false
+    }
+  ]
+}

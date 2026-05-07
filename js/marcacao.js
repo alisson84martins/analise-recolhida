@@ -50,15 +50,20 @@
     stepEl.classList.add('active');
   }
 
+  function linhaCadastrada(){
+    return !!S().findLinha(state.linha);
+  }
+
   function setLinha(v){
     state.linha = v.trim();
     els.iL.value = v;
-    // Linha habilita Tabela E Carro (Tabela é opcional)
-    els.stepTabela.classList.toggle('disabled', !state.linha);
-    els.iT.disabled = !state.linha;
-    els.stepCarro.classList.toggle('disabled', !state.linha);
-    els.iC.disabled = !state.linha;
-    if (!state.linha){
+    const okLinha = linhaCadastrada();
+    // Somente linha cadastrada habilita Tabela E Carro
+    els.stepTabela.classList.toggle('disabled', !okLinha);
+    els.iT.disabled = !okLinha;
+    els.stepCarro.classList.toggle('disabled', !okLinha);
+    els.iC.disabled = !okLinha;
+    if (!state.linha || !okLinha){
       setTabela('');
       setCarro('');
     }
@@ -80,22 +85,29 @@
   }
 
   function refreshOK(){
-    // Tabela é opcional. Basta Linha + Carro.
-    const ok = !!(state.linha && state.carro);
+    // Tabela é opcional. Basta Linha cadastrada + Carro.
+    const ok = !!(state.carro && linhaCadastrada());
     els.btnOK.disabled = !ok;
   }
 
   function onLinhaInput(){
     const v = els.iL.value.trim();
     state.linha = v;
-    // Habilita Tabela e Carro a partir da digitação da linha
-    els.stepTabela.classList.toggle('disabled', !state.linha);
-    els.iT.disabled = !state.linha;
-    els.stepCarro.classList.toggle('disabled', !state.linha);
-    els.iC.disabled = !state.linha;
+    const okLinha = linhaCadastrada();
+    // Só habilita Tabela e Carro quando a linha existe no cadastro
+    els.stepTabela.classList.toggle('disabled', !okLinha);
+    els.iT.disabled = !okLinha;
+    els.stepCarro.classList.toggle('disabled', !okLinha);
+    els.iC.disabled = !okLinha;
     refreshSuggestLinha();
-    // Limpa apenas Tabela (filtro depende da linha). Carro NÃO é zerado.
-    setTabela('');
+    // Limpa Tabela/Carro quando a linha não é válida
+    if (!okLinha){
+      setTabela('');
+      setCarro('');
+    } else {
+      // Limpa apenas Tabela (filtro depende da linha). Carro NÃO é zerado.
+      setTabela('');
+    }
     refreshOK();
   }
   function onTabelaInput(){
@@ -113,6 +125,10 @@
     const v = els.iL.value.trim();
     if (!v) return;
     setLinha(v);
+    if (!linhaCadastrada()){
+      Recolhida.toast('Linha não cadastrada', 'err');
+      return;
+    }
     focusTabela();
   }
   function focusTabela(){
@@ -120,7 +136,7 @@
     setTimeout(() => els.iT.focus(), 50);
   }
   function focusCarro(){
-    if (!state.linha) return; // Tabela é opcional; Carro só exige Linha
+    if (!linhaCadastrada()) return; // Tabela é opcional; Carro só exige Linha cadastrada
     activate(els.stepCarro);
     setTimeout(() => els.iC.focus(), 50);
   }
@@ -138,7 +154,7 @@
     );
   }
   function refreshSuggestTabela(){
-    if (!state.linha){ els.sT.innerHTML=''; return; }
+    if (!linhaCadastrada()){ els.sT.innerHTML=''; return; }
     const arr = S().suggestTabelasParaLinha(state.linha, state.tabela, 14);
     if (!arr.length){
       els.sT.innerHTML = `<span class="chip warn">Sem cadastro — registro ficará pendente</span>`;
@@ -176,7 +192,11 @@
   }
 
   function registrar(){
-    if (!state.linha || !state.carro) return; // Tabela opcional
+    if (!linhaCadastrada()) {
+      Recolhida.toast('Linha não cadastrada', 'err');
+      return;
+    }
+    if (!state.carro) return; // Tabela opcional
     const reg = S().novaMarcacao({ linha: state.linha, tabela: state.tabela, carro: state.carro });
     lastReg = reg;
     showLast(reg);
