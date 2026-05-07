@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recuperar Dados — Análise de Recolhida</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 { 
+      color: #0b3d2e;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .alert {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    .alert.info {
+      background: #d1ecf1;
+      border-left-color: #17a2b8;
+      color: #0c5460;
+    }
+    .alert.success {
+      background: #d4edda;
+      border-left-color: #28a745;
+      color: #155724;
+    }
+    .alert.error {
+      background: #f8d7da;
+      border-left-color: #dc3545;
+      color: #721c24;
+    }
+    .card {
+      background: #f9f9f9;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+    }
+    .card h2 {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0b3d2e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .btn:hover { background: #082b21; }
+    .btn.ghost {
+      background: transparent;
+      border: 1px solid #0b3d2e;
+      color: #0b3d2e;
+    }
+    .btn.ghost:hover { background: #f0f0f0; }
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: monospace;
+      margin-bottom: 10px;
+    }
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .file-label {
+      display: block;
+      padding: 15px;
+      border: 2px dashed #ddd;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .file-label:hover {
+      border-color: #0b3d2e;
+      background: #f5f5f5;
+    }
+    .preview {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 4px;
+      max-height: 300px;
+      overflow-y: auto;
+      font-size: 12px;
+      line-height: 1.4;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-bottom: 10px;
+    }
+    .step {
+      display: none;
+    }
+    .step.active {
+      display: block;
+    }
+    .step-indicator {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .step-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #e0e0e0;
+      color: #666;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .step-num.active {
+      background: #0b3d2e;
+      color: white;
+    }
+    .step-num.done {
+      background: #28a745;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔧 Recuperar Dados</h1>
+    
+    <div class="alert alert.info">
+      <strong>Seu localStorage foi limpo!</strong> Mas não se preocupe — este arquivo ajudará você a restaurar os dados.
+    </div>
+
+    <div class="step-indicator">
+      <div class="step-num active" id="step1-num">1</div>
+      <div class="step-num" id="step2-num">2</div>
+      <div class="step-num" id="step3-num">3</div>
+    </div>
+
+    <!-- PASSO 1: SELECIONAR ARQUIVO -->
+    <div class="step active" id="step1">
+      <div class="card">
+        <h2>Passo 1: Selecione o arquivo de backup</h2>
+        <p style="margin-bottom: 15px; font-size: 14px;">
+          Você tem um arquivo <code>recolhida_backup_*.json</code> na pasta do projeto. 
+          Escolha-o ou copie seu conteúdo abaixo.
+        </p>
+        
+        <label class="file-label">
+          📁 Escolher arquivo JSON
+          <input type="file" id="fileInput" accept="application/json" style="display: none;" />
+        </label>
+
+        <p style="text-align: center; margin: 15px 0; color: #999;">— ou —</p>
+
+        <label>Cole o conteúdo do JSON aqui:</label>
+        <textarea id="jsonInput" placeholder="Cole aqui o conteúdo do JSON..."></textarea>
+
+        <button class="btn" onclick="analisarDados()">✓ Analisar dados</button>
+      </div>
+    </div>
+
+    <!-- PASSO 2: REVISAR DADOS -->
+    <div class="step" id="step2">
+      <div class="card">
+        <h2>Passo 2: Revise os dados</h2>
+        <p style="margin-bottom: 15px; font-size: 14px;">
+          Estes são os dados encontrados no backup. Revise se está tudo correto:
+        </p>
+        <div class="preview" id="preview"></div>
+        <button class="btn" onclick="voltarPasso1()">← Voltar</button>
+        <button class="btn" onclick="irParaPasso3()">Restaurar dados →</button>
+      </div>
+    </div>
+
+    <!-- PASSO 3: CONFIRMAR -->
+    <div class="step" id="step3">
+      <div class="card">
+        <h2>Passo 3: Confirme a restauração</h2>
+        <p style="margin-bottom: 15px; font-size: 14px;">
+          Escolha como deseja restaurar:
+        </p>
+        
+        <label style="display: block; margin-bottom: 15px;">
+          <input type="radio" name="modo" value="replace" checked /> 
+          <strong>Substituir tudo</strong> — apaga os dados atuais e carrega o backup (RECOMENDADO)
+        </label>
+
+        <label style="display: block; margin-bottom: 20px;">
+          <input type="radio" name="modo" value="merge" /> 
+          <strong>Mesclar</strong> — mantém dados atuais e adiciona os do backup
+        </label>
+
+        <div class="alert alert.error">
+          <strong>⚠️ Atenção:</strong> Este processo modificará seu localStorage. 
+          Certifique-se de ter feito backup de dados importantes.
+        </div>
+
+        <button class="btn" onclick="voltarPasso2()">← Voltar</button>
+        <button class="btn" style="background: #28a745;" onclick="executarRestauracao()">
+          ✓ Confirmar restauração
+        </button>
+      </div>
+    </div>
+
+    <div id="resultado" style="display: none;">
+      <div class="alert alert.success">
+        <h2 style="margin-bottom: 10px;">✓ Sucesso!</h2>
+        <p>Os dados foram restaurados com sucesso. Você pode fechar esta página e voltar ao aplicativo.</p>
+        <button class="btn" onclick="voltarAoApp()">Voltar ao aplicativo</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let dadosCarregados = null;
+
+    document.getElementById('fileInput').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        document.getElementById('jsonInput').value = String(reader.result || '');
+      };
+      reader.onerror = () => {
+        alert('Erro ao ler arquivo');
+      };
+      reader.readAsText(file);
+    });
+
+    function analisarDados() {
+      const txt = document.getElementById('jsonInput').value.trim();
+      if (!txt) {
+        alert('Cole ou escolha um arquivo JSON');
+        return;
+      }
+
+      try {
+        let texto = txt;
+        if (texto.charCodeAt(0) === 0xFEFF) {
+          texto = texto.slice(1);
+        }
+        const obj = JSON.parse(texto);
+        
+        // Validação
+        if (!obj.__schema || !obj.__schema.startsWith('recolhida-sambaiba')) {
+          throw new Error('Não parece um backup da aplicação Análise de Recolhida');
+        }
+
+        dadosCarregados = obj;
+        exibirPreview(obj);
+        irParaPasso2();
+      } catch(err) {
+        alert('JSON inválido: ' + err.message);
+        console.error(err);
+      }
+    }
+
+    function exibirPreview(obj) {
+      const linhas = Array.isArray(obj.linhas) ? obj.linhas : [];
+      const tabelas = Array.isArray(obj.tabelas) ? obj.tabelas : [];
+      const carros = Array.isArray(obj.carros) ? obj.carros : [];
+      const marcacoes = Array.isArray(obj.marcacoes) ? obj.marcacoes : [];
+
+      const datas = marcacoes.map(m => m.data).filter(Boolean).sort();
+      const periodo = datas.length ? `${datas[0]} até ${datas[datas.length-1]}` : 'sem marcações';
+
+      const porClasse = { ADIANTADO:0, PONTUAL:0, ATRASADO:0, PENDENTE:0 };
+      marcacoes.forEach(m => {
+        if (porClasse[m.classe] !== undefined) porClasse[m.classe]++;
+      });
+
+      const preview = [
+        '📊 RESUMO DO BACKUP',
+        '',
+        '📝 Linhas cadastradas: ' + linhas.length,
+        '⏰ Tabelas (horários): ' + tabelas.length,
+        '🚌 Carros memorizados: ' + carros.length,
+        '📋 Marcações registradas: ' + marcacoes.length,
+        '',
+        '📅 Período: ' + periodo,
+        '',
+        '📈 Distribuição:',
+        '  • ADIANTADO:  ' + porClasse.ADIANTADO,
+        '  • PONTUAL:    ' + porClasse.PONTUAL,
+        '  • ATRASADO:   ' + porClasse.ATRASADO,
+        '  • PENDENTE:   ' + porClasse.PENDENTE,
+        '',
+        '✅ Arquivo válido e pronto para restaurar!'
+      ].join('\n');
+
+      document.getElementById('preview').textContent = preview;
+    }
+
+    function irParaPasso2() {
+      mudarPasso(2);
+    }
+
+    function voltarPasso1() {
+      mudarPasso(1);
+    }
+
+    function irParaPasso3() {
+      mudarPasso(3);
+    }
+
+    function voltarPasso2() {
+      mudarPasso(2);
+    }
+
+    function mudarPasso(n) {
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.getElementById('step' + n).classList.add('active');
+
+      document.querySelectorAll('.step-num').forEach((s, i) => {
+        s.classList.remove('active', 'done');
+        if (i + 1 < n) s.classList.add('done');
+        if (i + 1 === n) s.classList.add('active');
+      });
+    }
+
+    function executarRestauracao() {
+      if (!dadosCarregados) {
+        alert('Nenhum dado carregado');
+        return;
+      }
+
+      const modo = document.querySelector('input[name="modo"]:checked').value;
+
+      try {
+        // Simula o comportamento da app para restaurar localStorage
+        const PREFIX = 'recolhida_';
+        const K = {
+          LINHAS:    PREFIX + 'linhas',
+          TABELAS:   PREFIX + 'tabelas',
+          MARCACOES: PREFIX + 'marcacoes',
+          CARROS:    PREFIX + 'carros'
+        };
+
+        const linhas = Array.isArray(dadosCarregados.linhas) ? dadosCarregados.linhas : [];
+        const tabelas = Array.isArray(dadosCarregados.tabelas) ? dadosCarregados.tabelas : [];
+        const carros = Array.isArray(dadosCarregados.carros) ? dadosCarregados.carros : [];
+        const marcacoes = Array.isArray(dadosCarregados.marcacoes) ? dadosCarregados.marcacoes : [];
+
+        if (modo === 'replace') {
+          localStorage.setItem(K.LINHAS, JSON.stringify(linhas));
+          localStorage.setItem(K.TABELAS, JSON.stringify(tabelas));
+          localStorage.setItem(K.CARROS, JSON.stringify(carros));
+          localStorage.setItem(K.MARCACOES, JSON.stringify(marcacoes));
+        } else {
+          // Merge
+          const linhasAtuais = JSON.parse(localStorage.getItem(K.LINHAS) || '[]');
+          linhas.forEach(l => {
+            if (!linhasAtuais.find(x => x.codigo === l.codigo)) {
+              linhasAtuais.push(l);
+            }
+          });
+          localStorage.setItem(K.LINHAS, JSON.stringify(linhasAtuais));
+
+          const tabelasAtuais = JSON.parse(localStorage.getItem(K.TABELAS) || '[]');
+          tabelas.forEach(t => {
+            const i = tabelasAtuais.findIndex(x => x.linha === t.linha && x.tabela === t.tabela);
+            if (i >= 0) tabelasAtuais[i] = t; else tabelasAtuais.push(t);
+          });
+          localStorage.setItem(K.TABELAS, JSON.stringify(tabelasAtuais));
+
+          const carrosSet = new Set(JSON.parse(localStorage.getItem(K.CARROS) || '[]'));
+          carros.forEach(c => carrosSet.add(c));
+          localStorage.setItem(K.CARROS, JSON.stringify(Array.from(carrosSet)));
+
+          const ids = new Set(JSON.parse(localStorage.getItem(K.MARCACOES) || '[]').map(m => m.id));
+          const merged = JSON.parse(localStorage.getItem(K.MARCACOES) || '[]');
+          marcacoes.forEach(m => { if (!ids.has(m.id)) merged.push(m); });
+          localStorage.setItem(K.MARCACOES, JSON.stringify(merged));
+        }
+
+        document.getElementById('step3').style.display = 'none';
+        document.getElementById('resultado').style.display = 'block';
+      } catch(err) {
+        alert('Erro ao restaurar: ' + err.message);
+        console.error(err);
+      }
+    }
+
+    function voltarAoApp() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

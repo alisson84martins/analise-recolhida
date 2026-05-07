@@ -72,13 +72,24 @@
     const r = new FileReader();
     r.onload = () => {
       try {
-        const obj = JSON.parse(r.result);
+        let texto = String(r.result || '').trim();
+        // Remove BOM se presente
+        if (texto.charCodeAt(0) === 0xFEFF) {
+          texto = texto.slice(1);
+        }
+        const obj = JSON.parse(texto);
         S().importMaster(obj);
         Recolhida.toast('Mestre importado');
         refresh();
         if (Recolhida.historico) Recolhida.historico.refresh();
         if (Recolhida.marcacao) Recolhida.marcacao.refresh();
-      } catch(err){ Recolhida.toast('JSON inválido: '+err.message, 'err'); }
+      } catch(err){ 
+        console.error('Erro ao importar mestre:', err);
+        Recolhida.toast('JSON inválido: '+err.message, 'err'); 
+      }
+    };
+    r.onerror = () => {
+      Recolhida.toast('Falha ao ler arquivo', 'err');
     };
     r.readAsText(f);
     e.target.value = '';

@@ -235,28 +235,36 @@
     };
   }
   function importAll(obj, mode){
-    if (!obj || obj.__schema !== 'recolhida-sambaiba') throw new Error('Arquivo inválido');
+    if (!obj || typeof obj !== 'object') throw new Error('Estrutura inválida');
+    if (!obj.__schema || !obj.__schema.startsWith('recolhida-sambaiba')) throw new Error('Arquivo não é um backup da aplicação');
+    
+    // Valida que temos dados válidos antes de começar
+    const linhas = Array.isArray(obj.linhas) ? obj.linhas : [];
+    const tabelas = Array.isArray(obj.tabelas) ? obj.tabelas : [];
+    const carros = Array.isArray(obj.carros) ? obj.carros : [];
+    const marcacoes = Array.isArray(obj.marcacoes) ? obj.marcacoes : [];
+    
     if (mode === 'replace'){
-      _set(K.LINHAS, obj.linhas||[]);
-      _set(K.TABELAS, obj.tabelas||[]);
-      _set(K.CARROS, obj.carros||[]);
-      _set(K.MARCACOES, obj.marcacoes||[]);
-    } else { // merge
-      const linhas = getLinhas();
-      (obj.linhas||[]).forEach(l => { if (!linhas.find(x=>x.codigo===l.codigo)) linhas.push(l); });
       _set(K.LINHAS, linhas);
-      const tabelas = getTabelas();
-      (obj.tabelas||[]).forEach(t => {
-        const i = tabelas.findIndex(x => x.linha===t.linha && x.tabela===t.tabela);
-        if (i>=0) tabelas[i] = t; else tabelas.push(t);
-      });
       _set(K.TABELAS, tabelas);
-      const carros = new Set(getCarros());
-      (obj.carros||[]).forEach(c => carros.add(c));
-      _set(K.CARROS, Array.from(carros));
+      _set(K.CARROS, carros);
+      _set(K.MARCACOES, marcacoes);
+    } else { // merge
+      const linhasAtuais = getLinhas();
+      linhas.forEach(l => { if (!linhasAtuais.find(x=>x.codigo===l.codigo)) linhasAtuais.push(l); });
+      _set(K.LINHAS, linhasAtuais);
+      const tabelasAtuais = getTabelas();
+      tabelas.forEach(t => {
+        const i = tabelasAtuais.findIndex(x => x.linha===t.linha && x.tabela===t.tabela);
+        if (i>=0) tabelasAtuais[i] = t; else tabelasAtuais.push(t);
+      });
+      _set(K.TABELAS, tabelasAtuais);
+      const carrosSet = new Set(getCarros());
+      carros.forEach(c => carrosSet.add(c));
+      _set(K.CARROS, Array.from(carrosSet));
       const ids = new Set(getMarcacoes().map(m=>m.id));
       const merged = getMarcacoes().slice();
-      (obj.marcacoes||[]).forEach(m => { if (!ids.has(m.id)) merged.push(m); });
+      marcacoes.forEach(m => { if (!ids.has(m.id)) merged.push(m); });
       _set(K.MARCACOES, merged);
     }
     recalcPendentes();
@@ -272,9 +280,16 @@
     };
   }
   function importMaster(obj){
-    if (!obj || obj.__schema !== 'recolhida-sambaiba-master') throw new Error('Arquivo inválido');
-    _set(K.LINHAS, obj.linhas||[]);
-    _set(K.TABELAS, obj.tabelas||[]);
+    if (!obj || typeof obj !== 'object') throw new Error('Estrutura inválida');
+    if (!obj.__schema || obj.__schema !== 'recolhida-sambaiba-master') throw new Error('Não é um arquivo de mestre válido');
+    
+    const linhas = Array.isArray(obj.linhas) ? obj.linhas : [];
+    const tabelas = Array.isArray(obj.tabelas) ? obj.tabelas : [];
+    
+    if (!linhas.length && !tabelas.length) throw new Error('Arquivo vazio');
+    
+    _set(K.LINHAS, linhas);
+    _set(K.TABELAS, tabelas);
     recalcPendentes();
   }
 

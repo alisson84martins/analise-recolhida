@@ -56,12 +56,18 @@
     }
 
     try {
-      const obj = JSON.parse(txt);
+      let texto = txt;
+      // Remove BOM se presente
+      if (texto.charCodeAt(0) === 0xFEFF) {
+        texto = texto.slice(1);
+      }
+      const obj = JSON.parse(texto);
       const normalized = normalizeImportPayload(obj);
       pendingMobileImport = normalized;
       setPreview(renderImportSummary(normalized));
       Recolhida.toast('JSON analisado com sucesso');
     } catch(err){
+      console.error('Erro ao analisar JSON móvel:', err);
       setPreview('JSON inválido: ' + err.message);
       Recolhida.toast('JSON inválido: ' + err.message, 'err');
     }
@@ -276,14 +282,25 @@
     const r = new FileReader();
     r.onload = () => {
       try {
-        const obj = JSON.parse(r.result);
+        let texto = String(r.result || '').trim();
+        // Remove BOM se presente
+        if (texto.charCodeAt(0) === 0xFEFF) {
+          texto = texto.slice(1);
+        }
+        const obj = JSON.parse(texto);
         const modo = confirm('Confirmar restauração:\n\nOK = SUBSTITUIR todos os dados atuais\nCancelar = MESCLAR (preservar atuais)') ? 'replace' : 'merge';
         S().importAll(obj, modo);
         Recolhida.toast('Backup restaurado ('+modo+')');
         if (Recolhida.cadastros) Recolhida.cadastros.refresh();
         if (Recolhida.historico) Recolhida.historico.refresh();
         if (Recolhida.marcacao) Recolhida.marcacao.refresh();
-      } catch(err){ Recolhida.toast('JSON inválido: '+err.message,'err'); }
+      } catch(err){ 
+        console.error('Erro ao restaurar JSON:', err);
+        Recolhida.toast('JSON inválido: '+err.message,'err'); 
+      }
+    };
+    r.onerror = () => {
+      Recolhida.toast('Falha ao ler arquivo', 'err');
     };
     r.readAsText(f);
     e.target.value = '';
