@@ -334,14 +334,20 @@
     const grupos = Object.values(por).sort((a,b) =>
       (a.tabela ? 1 : 0) - (b.tabela ? 1 : 0) || b.qtd - a.qtd
     );
-    els.pendentes.innerHTML = grupos.map((r, i) => {
+    // Gera datalist com linhas cadastradas
+    const linhasDisp = S().getLinhas().map(l => l.codigo).join('|');
+    const dataListId = 'pendentes-linhas-list';
+    const dataListHTML = `<datalist id="${dataListId}">${S().getLinhas().map(l => `<option value="${l.codigo}">`).join('')}</datalist>`;
+    
+    els.pendentes.innerHTML = dataListHTML + grupos.map((r, i) => {
       const tabLabel = r.tabela ? `Tabela <strong>${r.tabela}</strong>` : `<em class="muted">sem tabela</em>`;
       return `
       <div class="pend-item">
         <div>Linha <strong>${r.linha}</strong> · ${tabLabel} · <span class="muted">${r.qtd} marcaç${r.qtd===1?'ão':'ões'}</span></div>
         <div class="pend-action">
           <input type="text" inputmode="text" autocomplete="off"
-                 placeholder="Nova linha"
+                 list="${dataListId}"
+                 placeholder="Nova linha (ex: 119 C)"
                  data-pend-idx="${i}" />
           <button class="primary small" data-pend-apply="${i}">Corrigir linha</button>
           <button class="warn small" data-pend-delete="${i}">Excluir</button>
@@ -356,6 +362,15 @@
         const inp = els.pendentes.querySelector(`input[data-pend-idx="${i}"]`);
         const novaLinha = (inp.value || '').trim();
         if (!novaLinha){ Recolhida.toast('Digite a nova linha', 'err'); inp.focus(); return; }
+        
+        // Valida se a linha está cadastrada
+        const linhaEncontrada = S().findLinha(novaLinha);
+        if (!linhaEncontrada){
+          Recolhida.toast(`Linha "${novaLinha}" não está cadastrada. Cadastre primeiro em Cadastros.`, 'err');
+          inp.focus();
+          return;
+        }
+        
         let n = 0;
         grupo.ids.forEach(id => {
           if (S().updateMarcacao(id, { linha: novaLinha })) n++;
