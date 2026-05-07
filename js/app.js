@@ -51,7 +51,7 @@
     }));
   }
 
-  // -------- service worker --------
+  // -------- service worker com auto-update detection --------
   function setupSW(){
     if (!('serviceWorker' in navigator)) return;
     // ServiceWorker só funciona via http(s). Em file:// o navegador bloqueia — degrada silenciosamente.
@@ -60,7 +60,24 @@
       if (el) el.textContent = 'Modo arquivo · sem instalação PWA (sirva via http para instalar)';
       return;
     }
-    navigator.serviceWorker.register('service-worker.js').catch(err => {
+    
+    navigator.serviceWorker.register('service-worker.js').then(reg => {
+      // Verifica atualizações a cada 30 segundos
+      setInterval(() => reg.update(), 30000);
+      
+      // Detecta quando há uma nova versão do SW esperando
+      reg.addEventListener('updatefound', () => {
+        const newSW = reg.installing;
+        newSW.addEventListener('statechange', () => {
+          if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
+            // Há uma atualização disponível
+            toast('🔄 Nova versão disponível! Recarregue para atualizar.', 'warn');
+            // Opcional: recarregar automaticamente após 5 segundos
+            setTimeout(() => location.reload(), 5000);
+          }
+        });
+      });
+    }).catch(err => {
       console.warn('SW falhou:', err);
     });
   }

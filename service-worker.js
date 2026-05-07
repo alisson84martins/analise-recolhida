@@ -1,5 +1,5 @@
-/* Service Worker — Análise de Recolhida (offline-first) */
-const CACHE = 'recolhida-v3';
+/* Service Worker — Análise de Recolhida (offline-first com auto-update) */
+const CACHE = 'recolhida-v4';
 const ASSETS = [
   './',
   './index.html',
