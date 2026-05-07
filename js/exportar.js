@@ -2,6 +2,8 @@
 (function (global) {
   const S = () => Recolhida.storage;
   const C = () => Recolhida.classify;
+  const els = {};
+  let pendingMobileImport = null;
 
   function init(){
     document.getElementById('data-exportar-dia').value = new Date().toISOString().slice(0,10);
@@ -10,13 +12,132 @@
     document.getElementById('data-exportar-ini').value = ini.toISOString().slice(0,10);
     document.getElementById('data-exportar-fim').value = hoje.toISOString().slice(0,10);
 
+    els.fileImportMobileJson = document.getElementById('file-import-mobile-json');
+    els.btnImportMobileAnalisar = document.getElementById('btn-import-mobile-analisar');
+    els.inputImportMobileJson = document.getElementById('import-mobile-json');
+    els.importMobilePreview = document.getElementById('import-mobile-preview');
+    els.btnImportMobileMerge = document.getElementById('btn-import-mobile-merge');
+    els.btnImportMobileReplace = document.getElementById('btn-import-mobile-replace');
+
     document.getElementById('btn-export-dia').addEventListener('click', exportDia);
     document.getElementById('btn-export-semana').addEventListener('click', exportSemana);
     document.getElementById('btn-backup-json').addEventListener('click', backupJson);
     document.getElementById('file-restore-json').addEventListener('change', restoreJson);
 
+    if (els.fileImportMobileJson) els.fileImportMobileJson.addEventListener('change', onMobileFileSelected);
+    if (els.btnImportMobileAnalisar) els.btnImportMobileAnalisar.addEventListener('click', analisarImportacaoMobile);
+    if (els.btnImportMobileMerge) els.btnImportMobileMerge.addEventListener('click', () => importarMobile('merge'));
+    if (els.btnImportMobileReplace) els.btnImportMobileReplace.addEventListener('click', () => importarMobile('replace'));
+
     document.getElementById('btn-limpar-dia').addEventListener('click', limparDia);
     document.getElementById('btn-limpar-tudo').addEventListener('click', limparTudo);
+  }
+
+  function onMobileFileSelected(e){
+    const f = e.target.files && e.target.files[0];
+    if (!f) return;
+    const r = new FileReader();
+    r.onload = () => {
+      if (els.inputImportMobileJson) els.inputImportMobileJson.value = String(r.result || '');
+      analisarImportacaoMobile();
+    };
+    r.onerror = () => Recolhida.toast('Falha ao ler arquivo', 'err');
+    r.readAsText(f);
+    e.target.value = '';
+  }
+
+  function analisarImportacaoMobile(){
+    const txt = (els.inputImportMobileJson && els.inputImportMobileJson.value || '').trim();
+    pendingMobileImport = null;
+    if (!txt){
+      setPreview('Cole o JSON ou escolha um arquivo de backup do celular.');
+      Recolhida.toast('Nenhum JSON informado', 'warn');
+      return;
+    }
+
+    try {
+      const obj = JSON.parse(txt);
+      const normalized = normalizeImportPayload(obj);
+      pendingMobileImport = normalized;
+      setPreview(renderImportSummary(normalized));
+      Recolhida.toast('JSON analisado com sucesso');
+    } catch(err){
+      setPreview('JSON inválido: ' + err.message);
+      Recolhida.toast('JSON inválido: ' + err.message, 'err');
+    }
+  }
+
+  function normalizeImportPayload(obj){
+    if (!obj || typeof obj !== 'object') throw new Error('Estrutura inválida');
+    if (obj.__schema === 'recolhida-sambaiba') return obj;
+
+    // Aceita estrutura sem metadados, desde que tenha os blocos principais.
+    if (Array.isArray(obj.marcacoes) || Array.isArray(obj.linhas) || Array.isArray(obj.tabelas)){
+      return {
+        __schema: 'recolhida-sambaiba',
+        __version: 1,
+        __exportedAt: obj.__exportedAt || new Date().toISOString(),
+        linhas: Array.isArray(obj.linhas) ? obj.linhas : [],
+        tabelas: Array.isArray(obj.tabelas) ? obj.tabelas : [],
+        carros: Array.isArray(obj.carros) ? obj.carros : [],
+        marcacoes: Array.isArray(obj.marcacoes) ? obj.marcacoes : []
+      };
+    }
+
+    throw new Error('Não parece um backup da aplicação');
+  }
+
+  function renderImportSummary(obj){
+    const linhas = Array.isArray(obj.linhas) ? obj.linhas : [];
+    const tabelas = Array.isArray(obj.tabelas) ? obj.tabelas : [];
+    const carros = Array.isArray(obj.carros) ? obj.carros : [];
+    const marc = Array.isArray(obj.marcacoes) ? obj.marcacoes : [];
+
+    const datas = marc.map(m => m.data).filter(Boolean).sort();
+    const periodo = datas.length ? `${datas[0]} até ${datas[datas.length-1]}` : 'sem marcações';
+
+    const porClasse = { ADIANTADO:0, PONTUAL:0, ATRASADO:0, PENDENTE:0 };
+    marc.forEach(m => {
+      if (porClasse[m.classe] !== undefined) porClasse[m.classe]++;
+    });
+
+    return [
+      'Prévia do pacote:',
+      `- Linhas: ${linhas.length}`,
+      `- Tabelas: ${tabelas.length}`,
+      `- Carros: ${carros.length}`,
+      `- Marcações: ${marc.length}`,
+      `- Período: ${periodo}`,
+      `- Classes: ADIANTADO ${porClasse.ADIANTADO} | PONTUAL ${porClasse.PONTUAL} | ATRASADO ${porClasse.ATRASADO} | PENDENTE ${porClasse.PENDENTE}`
+    ].join('\n');
+  }
+
+  function setPreview(text){
+    if (!els.importMobilePreview) return;
+    els.importMobilePreview.textContent = text;
+  }
+
+  function importarMobile(modo){
+    if (!pendingMobileImport){
+      Recolhida.toast('Analise um JSON antes de importar', 'warn');
+      return;
+    }
+
+    if (modo === 'replace'){
+      if (!confirm('Substituir tudo com os dados do celular? Esta ação não pode ser desfeita.')) return;
+    } else {
+      if (!confirm('Mesclar dados do celular com os dados atuais?')) return;
+    }
+
+    try {
+      S().importAll(pendingMobileImport, modo);
+      Recolhida.toast('Importação concluída (' + modo + ')');
+      if (Recolhida.cadastros) Recolhida.cadastros.refresh();
+      if (Recolhida.historico) Recolhida.historico.refresh();
+      if (Recolhida.marcacao) Recolhida.marcacao.refresh();
+    } catch(err){
+      Recolhida.toast('Falha na importação: ' + err.message, 'err');
+    }
   }
 
   function exportDia(){

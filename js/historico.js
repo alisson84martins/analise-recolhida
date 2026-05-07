@@ -11,8 +11,17 @@
     els.paretoLinhas = document.getElementById('pareto-linhas');
     els.rankingTabelasBody = document.querySelector('#ranking-tabelas tbody');
     els.pendentes = document.getElementById('pendentes');
+    els.graficoData = document.getElementById('historico-grafico-data');
+    els.graficoCanvas = document.getElementById('historico-grafico-hora');
+    els.graficoMeta = document.getElementById('historico-grafico-meta');
+    els.btnGraficoEnviar = document.getElementById('btn-historico-grafico-enviar');
+
+    if (els.graficoData) els.graficoData.value = ymdLocal(new Date());
 
     els.filtroPeriodo.addEventListener('change', refresh);
+    if (els.graficoData) els.graficoData.addEventListener('change', refresh);
+    if (els.btnGraficoEnviar) els.btnGraficoEnviar.addEventListener('click', enviarGrafico);
+    window.addEventListener('resize', () => renderGraficoHora(S().getMarcacoes()));
     refresh();
   }
 
@@ -42,6 +51,163 @@
     renderParetoLinhas(filtradas);
     renderRankingTabelas(filtradas);
     renderPendentes(all);
+    renderGraficoHora(all);
+  }
+
+  function ymdLocal(d){
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  }
+
+  function horaToIndex(hhmm){
+    if (!hhmm || !/^\d{2}:\d{2}$/.test(hhmm)) return -1;
+    const h = parseInt(hhmm.slice(0,2), 10);
+    return Number.isFinite(h) && h >= 0 && h <= 23 ? h : -1;
+  }
+
+  function calcularComparativoHora(all, ymd){
+    const real = Array(24).fill(0);
+    const previsto = Array(24).fill(0);
+
+    all.filter(m => m.data === ymd).forEach(m => {
+      const h = horaToIndex(m.hora);
+      if (h >= 0) real[h]++;
+    });
+
+    S().getTabelas().forEach(t => {
+      const h = horaToIndex(t.horaPrevista);
+      if (h >= 0) previsto[h]++;
+    });
+
+    return { real, previsto };
+  }
+
+  function renderGraficoHora(all){
+    if (!els.graficoCanvas || !els.graficoMeta) return;
+    const ymd = (els.graficoData && els.graficoData.value) || ymdLocal(new Date());
+    const { real, previsto } = calcularComparativoHora(all, ymd);
+
+    const totalReal = real.reduce((s,v) => s + v, 0);
+    const totalPrevisto = previsto.reduce((s,v) => s + v, 0);
+    const diff = totalReal - totalPrevisto;
+    const sinal = diff > 0 ? '+' : '';
+    els.graficoMeta.textContent = `Data ${formatDateBR(ymd)} · Real: ${totalReal} · Previsto: ${totalPrevisto} · Diferença: ${sinal}${diff}`;
+
+    drawGraficoComparativo(els.graficoCanvas, real, previsto);
+  }
+
+  function drawGraficoComparativo(canvas, real, previsto){
+    const dpr = window.devicePixelRatio || 1;
+    const cssW = Math.max(640, canvas.clientWidth || 640);
+    const cssH = 320;
+    canvas.width = Math.floor(cssW * dpr);
+    canvas.height = Math.floor(cssH * dpr);
+
+    const ctx = canvas.getContext('2d');
+    ctx.setTransform(1,0,0,1,0,0);
+    ctx.scale(dpr, dpr);
+
+    const w = cssW;
+    const h = cssH;
+    const pad = { top: 28, right: 20, bottom: 40, left: 36 };
+    const gw = w - pad.left - pad.right;
+    const gh = h - pad.top - pad.bottom;
+
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#1d272e';
+    ctx.fillRect(0, 0, w, h);
+
+    const maxV = Math.max(1, ...real, ...previsto);
+    const groupW = gw / 24;
+    const barW = Math.max(2, Math.min(10, groupW * 0.34));
+
+    ctx.strokeStyle = 'rgba(152,164,173,0.25)';
+    ctx.lineWidth = 1;
+    for (let i=0; i<=4; i++){
+      const y = pad.top + (gh * i / 4);
+      ctx.beginPath();
+      ctx.moveTo(pad.left, y);
+      ctx.lineTo(w - pad.right, y);
+      ctx.stroke();
+    }
+
+    ctx.fillStyle = '#98a4ad';
+    ctx.font = '11px Segoe UI';
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+    for (let i=0; i<=4; i++){
+      const val = Math.round(maxV - (maxV * i / 4));
+      const y = pad.top + (gh * i / 4);
+      ctx.fillText(String(val), pad.left - 6, y);
+    }
+
+    for (let hIdx=0; hIdx<24; hIdx++){
+      const cx = pad.left + hIdx*groupW + groupW/2;
+      const vPrev = previsto[hIdx];
+      const vReal = real[hIdx];
+      const hp = gh * (vPrev / maxV);
+      const hr = gh * (vReal / maxV);
+
+      ctx.fillStyle = '#6aaad4';
+      ctx.fillRect(cx - barW - 1, pad.top + gh - hp, barW, hp);
+
+      ctx.fillStyle = '#1f8a4c';
+      ctx.fillRect(cx + 1, pad.top + gh - hr, barW, hr);
+    }
+
+    ctx.fillStyle = '#98a4ad';
+    ctx.font = '10px Segoe UI';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    for (let hIdx=0; hIdx<24; hIdx+=2){
+      const x = pad.left + hIdx*groupW + groupW/2;
+      ctx.fillText(String(hIdx).padStart(2,'0'), x, h - pad.bottom + 8);
+    }
+
+    ctx.font = '12px Segoe UI';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = '#6aaad4';
+    ctx.fillRect(pad.left, 10, 12, 12);
+    ctx.fillStyle = '#f4f6f7';
+    ctx.fillText('Previsto (tabelas)', pad.left + 18, 16);
+    ctx.fillStyle = '#1f8a4c';
+    ctx.fillRect(pad.left + 150, 10, 12, 12);
+    ctx.fillStyle = '#f4f6f7';
+    ctx.fillText('Real (marcacoes)', pad.left + 168, 16);
+  }
+
+  async function enviarGrafico(){
+    if (!els.graficoCanvas) return;
+    const ymd = (els.graficoData && els.graficoData.value) || ymdLocal(new Date());
+    const nome = `recolhidas_por_hora_${ymd}.png`;
+
+    const blob = await new Promise(resolve => els.graficoCanvas.toBlob(resolve, 'image/png'));
+    if (!blob){ Recolhida.toast('Falha ao gerar o grafico', 'err'); return; }
+
+    const { real, previsto } = calcularComparativoHora(S().getMarcacoes(), ymd);
+    const totalReal = real.reduce((s,v) => s + v, 0);
+    const totalPrevisto = previsto.reduce((s,v) => s + v, 0);
+    const texto = `Recolhidas por hora (${formatDateBR(ymd)}) - Real: ${totalReal} | Previsto: ${totalPrevisto}`;
+
+    try {
+      if (navigator.share && typeof File !== 'undefined'){
+        const file = new File([blob], nome, { type: 'image/png' });
+        if (!navigator.canShare || navigator.canShare({ files:[file] })){
+          await navigator.share({
+            title: `Grafico recolhidas por hora - ${ymd}`,
+            text: texto,
+            files: [file]
+          });
+          Recolhida.toast('Grafico enviado');
+          return;
+        }
+      }
+    } catch (err) {
+      if (err && err.name === 'AbortError') return;
+    }
+
+    Recolhida.dl.blob(blob, nome);
+    Recolhida.toast('Compartilhamento indisponivel, arquivo baixado', 'warn');
   }
 
   function renderResumoDia(all){

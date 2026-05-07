@@ -325,3 +325,44 @@ main{ padding: 12px; padding-bottom: 56px; max-width: 720px; margin: 0 auto }
   background: var(--primaria-2); color:#fff;
   border-radius: 6px; padding: 6px 10px; font-weight:700; font-size:12px;
 }
+
+.hist-chart-wrap{
+  margin-top: 8px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+#historico-grafico-hora{
+  display: block;
+  width: 100%;
+  min-height: 320px;
+  background: var(--bg-3);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+}
+
+#historico-grafico-meta{
+  margin-top: 2px;
+}
+
+.import-json{
+  width: 100%;
+  min-height: 150px;
+  background: var(--bg-3);
+  color: var(--txt);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 10px 12px;
+  resize: vertical;
+  font-family: Consolas, "Courier New", monospace;
+  margin-top: 6px;
+}
+
+.import-preview{
+  margin-top: 8px;
+  background: var(--bg-3);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 10px 12px;
+  white-space: pre-line;
+}

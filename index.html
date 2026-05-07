@@ -219,6 +219,19 @@
       </div>
 
       <div class="card">
+        <h3>Recolhidas por Hora (Real x Previsto)</h3>
+        <p class="muted small">Compara quantos carros recolheram no horário e quantos deveriam recolher conforme as tabelas cadastradas.</p>
+        <div class="form-row">
+          <input id="historico-grafico-data" type="date" />
+          <button id="btn-historico-grafico-enviar" class="primary" type="button">Enviar gráfico</button>
+        </div>
+        <div id="historico-grafico-meta" class="muted small"></div>
+        <div class="hist-chart-wrap">
+          <canvas id="historico-grafico-hora" height="320" aria-label="Gráfico de recolhidas por hora" role="img"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
         <h3>Pendentes (sem cadastro mestre)</h3>
         <p class="muted small">Recalculam automaticamente quando você cadastrar a Linha+Tabela.</p>
         <div id="pendentes" class="pendentes"></div>
@@ -302,6 +315,24 @@
             Restaurar de .json
             <input id="file-restore-json" type="file" accept="application/json" hidden />
           </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Importar trabalho do celular</h3>
+        <p class="muted small">Use o backup .json gerado no celular. Você pode escolher o arquivo ou colar o JSON aqui, ver uma prévia e importar.</p>
+        <div class="form-row">
+          <label class="ghost file-label">
+            Escolher backup do celular
+            <input id="file-import-mobile-json" type="file" accept="application/json" hidden />
+          </label>
+          <button id="btn-import-mobile-analisar" class="ghost" type="button">Ler conteúdo</button>
+        </div>
+        <textarea id="import-mobile-json" class="import-json" placeholder="Cole aqui o JSON exportado no celular"></textarea>
+        <div id="import-mobile-preview" class="import-preview muted small">Aguardando JSON para análise.</div>
+        <div class="form-row">
+          <button id="btn-import-mobile-merge" class="primary" type="button">Importar mesclando</button>
+          <button id="btn-import-mobile-replace" class="warn" type="button">Importar substituindo tudo</button>
         </div>
       </div>
 
